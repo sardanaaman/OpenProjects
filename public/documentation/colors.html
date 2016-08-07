@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html class="no-js">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="flat, clean, responsive, application frontend template built with bootstrap 3">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Colors | OpenProjects (Beta)</title>
+
+	<link rel="stylesheet" href="styles/docs.css">
+
+	<body>
+		<div class="pageload">
+			<div class="spinner"></div>
+		</div>
+		<header class="header fixed-sticky">
+			<div class="container">
+				<nav class="heading-font">
+					<div class="branding">
+						<button type="button" class="mobile-toggle"> <span class="icon-grid"></span> </button> <a href="index.html" class="logo transition"><i class="icon-layers" style="padding-right:.9375rem;"></i><span>Open<strong>Projects</strong><sup style="font-size:0.6em;">BETA</sup></span></a> </div>
+					<div class="navigation">
+						<ul class="nav hidden-md hidden-lg">
+							<li class="hide">
+								<a href="#top" style="border-bottom:none;"></a>
+							</li>
+							<li>
+								<a href="index.html" style="border-bottom:none;">Getting Started</a></li>
+							<li>
+								<a href="layout-options.html" style="border-bottom:none;">Layout options</a></li>
+							<li>
+								<a href="colors.html" style="border-bottom:none;">Colors</a></li>
+							<li>
+								<a href="helpers.html" style="border-bottom:none;">Helpers</a></li>
+						</ul>
+					</div>
+				</nav>
+			</div>
+		</header>
+		<section class="content-section">
+			<div class="container">
+				<div class="columns">
+					<div class="column w300  hidden-sm hidden-xs">
+						<h6 class="text-muted text-uppercase">Table of contents</h6>
+						<ul class="list-unstyled toc">
+							<li>
+								<a href="index.html"> <span>Getting Started</span> </a>
+							</li>
+							<li>
+								<a href="layout-options.html"> <span>Layout options</span> </a>
+							</li>
+							<li>
+								<a href="colors.html"> <span>Colors</span> </a>
+							</li>
+							<li>
+								<a href="helpers.html"> <span>Helpers</span> </a>
+							</li>
+
+							<li>
+								<a href="3rd.html"> <span>Credits / 3rd party plugins</span> </a>
+							</li>
+						</ul>
+						<hr>
+						<!--<ul class="list-unstyled toc">
+							<li>
+								<a href="changelog.html"> <span>Changelog</span> </a>
+							</li>
+						</ul>-->
+					</div>
+					<div class="column bl">
+						<h3 class="page-title">Colors</h3>
+						<p>What follows is a list of all the color schemes used by the App. These are basically extensions of the default bootstrap backgrounds and text variants.</p>
+						<div class="card bg-white">
+							<div class="card-block">
+								<h5>Base color brands (Bootstrap Default)</h5>
+								<div class="color-brands">
+									<div class="color-brand bg-primary"></div>
+									<div class="color-brand bg-info"></div>
+									<div class="color-brand bg-danger"></div>
+									<div class="color-brand bg-success"></div>
+									<div class="color-brand bg-default"></div>
+									<div class="color-brand bg-dark"></div>
+									<div class="color-brand bg-white b-a"></div>
+								</div>
+								<h5>Base color weights</h5>
+								<div class="color-brands">
+									<div>
+										<div class="text-uppercase title">primary</div>
+										<div class="color-brand text-white">
+											<div class="bg-primary-lighter">10% lighter</div>
+											<div class="bg-primary-light">5% lighter</div>
+											<div class="bg-primary">base</div>
+											<div class="bg-primary-dark">5% darker</div>
+											<div class="bg-primary-darker">10% darker</div>
+										</div>
+									</div>
+									<div>
+										<div class="text-uppercase title">default</div>
+										<div class="color-brand text-white">
+											<div class="bg-default-lighter">10% lighter</div>
+											<div class="bg-default-light">5% lighter</div>
+											<div class="bg-default">base</div>
+											<div class="bg-default-dark">5% darker</div>
+											<div class="bg-default-darker">10% darker</div>
+										</div>
+									</div>
+									<div>
+										<div class="text-uppercase title">warning</div>
+										<div class="color-brand text-white">
+											<div class="bg-warning-lighter">10% lighter</div>
+											<div class="bg-warning-light">5% lighter</div>
+											<div class="bg-warning">base</div>
+											<div class="bg-warning-dark">5% darker</div>
+											<div class="bg-warning-darker">10% darker</div>
+										</div>
+									</div>
+									<div>
+										<div class="text-uppercase title">success</div>
+										<div class="color-brand text-white">
+											<div class="bg-success-lighter">10% lighter</div>
+											<div class="bg-success-light">5% lighter</div>
+											<div class="bg-success">base</div>
+											<div class="bg-success-dark">5% darker</div>
+											<div class="bg-success-darker">10% darker</div>
+										</div>
+									</div>
+									<div>
+										<div class="text-uppercase title">info</div>
+										<div class="color-brand text-white">
+											<div class="bg-info-lighter">10% lighter</div>
+											<div class="bg-info-light">5% lighter</div>
+											<div class="bg-info">base</div>
+											<div class="bg-info-dark">5% darker</div>
+											<div class="bg-info-darker">10% darker</div>
+										</div>
+									</div>
+									<div>
+										<div class="text-uppercase title">danger</div>
+										<div class="color-brand text-white">
+											<div class="bg-danger-lighter">10% lighter</div>
+											<div class="bg-danger-light">5% lighter</div>
+											<div class="bg-danger">base</div>
+											<div class="bg-danger-dark">5% darker</div>
+											<div class="bg-danger-darker">10% darker</div>
+										</div>
+									</div>
+									<div>
+										<div class="text-uppercase title">dark</div>
+										<div class="color-brand text-white">
+											<div class="bg-dark-lighter">10% lighter</div>
+											<div class="bg-dark-light">5% lighter</div>
+											<div class="bg-dark">base</div>
+											<div class="bg-dark-dark">5% darker</div>
+											<div class="bg-dark-darker">10% darker</div>
+										</div>
+									</div>
+									<div>
+										<div class="text-uppercase title">White</div>
+										<div class="color-brand">
+											<div class="bg-white-lighter"></div>
+											<div class="bg-white-light"></div>
+											<div class="bg-white">base</div>
+											<div class="bg-white-dark">5% darker</div>
+											<div class="bg-white-darker">10% darker</div>
+										</div>
+									</div>
+								</div>
+								<h5>Material color palette</h5>
+								<div class="color-brands">
+									<div>
+										<div class="text-uppercase title">red</div>
+										<div class="color-brand text-white">
+											<div class="bg-red-lighter">10% lighter</div>
+											<div class="bg-red-light">5% lighter</div>
+											<div class="bg-red">base</div>
+											<div class="bg-red-dark">5% darker</div>
+											<div class="bg-red-darker">10% darker</div>
+										</div>
+									</div>
+									<div>
+										<div class="text-uppercase title">pink</div>
+										<div class="color-brand text-white">
+											<div class="bg-pink-lighter">10% lighter</div>
+											<div class="bg-pink-light">5% lighter</div>
+											<div class="bg-pink">base</div>
+											<div class="bg-pink-dark">5% darker</div>
+											<div class="bg-pink-darker">10% darker</div>
+										</div>
+									</div>
+									<div>
+										<div class="text-uppercase title">purple</div>
+										<div class="color-brand text-white">
+											<div class="bg-purple-lighter">10% lighter</div>
+											<div class="bg-purple-light">5% lighter</div>
+											<div class="bg-purple">base</div>
+											<div class="bg-purple-dark">5% darker</div>
+											<div class="bg-purple-darker">10% darker</div>
+										</div>
+									</div>
+									<div>
+										<div class="text-uppercase title">deeppurple</div>
+										<div class="color-brand text-white">
+											<div class="bg-deeppurple-lighter">10% lighter</div>
+											<div class="bg-deeppurple-light">5% lighter</div>
+											<div class="bg-deeppurple">base</div>
+											<div class="bg-deeppurple-dark">5% darker</div>
+											<div class="bg-deeppurple-darker">10% darker</div>
+										</div>
+									</div>
+									<div>
+										<div class="text-uppercase title">indigo</div>
+										<div class="color-brand text-white">
+											<div class="bg-indigo-lighter">10% lighter</div>
+											<div class="bg-indigo-light">5% lighter</div>
+											<div class="bg-indigo">base</div>
+											<div class="bg-indigo-dark">5% darker</div>
+											<div class="bg-indigo-darker">10% darker</div>
+										</div>
+									</div>
+									<div>
+										<div class="text-uppercase title">blue</div>
+										<div class="color-brand text-white">
+											<div class="bg-blue-lighter">10% lighter</div>
+											<div class="bg-blue-light">5% lighter</div>
+											<div class="bg-blue">base</div>
+											<div class="bg-blue-dark">5% darker</div>
+											<div class="bg-blue-darker">10% darker</div>
+										</div>
+									</div>
+									<div>
+										<div class="text-uppercase title">lightblue</div>
+										<div class="color-brand text-white">
+											<div class="bg-lightblue-lighter">10% lighter</div>
+											<div class="bg-lightblue-light">5% lighter</div>
+											<div class="bg-lightblue">base</div>
+											<div class="bg-lightblue-dark">5% darker</div>
+											<div class="bg-lightblue-darker">10% darker</div>
+										</div>
+									</div>
+									<div>
+										<div class="text-uppercase title">cyan</div>
+										<div class="color-brand text-white">
+											<div class="bg-cyan-lighter">10% lighter</div>
+											<div class="bg-cyan-light">5% lighter</div>
+											<div class="bg-cyan">base</div>
+											<div class="bg-cyan-dark">5% darker</div>
+											<div class="bg-cyan-darker">10% darker</div>
+										</div>
+									</div>
+									<div>
+										<div class="text-uppercase title">teal</div>
+										<div class="color-brand text-white">
+											<div class="bg-teal-lighter">10% lighter</div>
+											<div class="bg-teal-light">5% lighter</div>
+											<div class="bg-teal">base</div>
+											<div class="bg-teal-dark">5% darker</div>
+											<div class="bg-teal-darker">10% darker</div>
+										</div>
+									</div>
+									<div>
+										<div class="text-uppercase title">green</div>
+										<div class="color-brand text-white">
+											<div class="bg-green-lighter">10% lighter</div>
+											<div class="bg-green-light">5% lighter</div>
+											<div class="bg-green">base</div>
+											<div class="bg-green-dark">5% darker</div>
+											<div class="bg-green-darker">10% darker</div>
+										</div>
+									</div>
+									<div>
+										<div class="text-uppercase title">lightgreen</div>
+										<div class="color-brand text-white">
+											<div class="bg-lightgreen-lighter">10% lighter</div>
+											<div class="bg-lightgreen-light">5% lighter</div>
+											<div class="bg-lightgreen">base</div>
+											<div class="bg-lightgreen-dark">5% darker</div>
+											<div class="bg-lightgreen-darker">10% darker</div>
+										</div>
+									</div>
+									<div>
+										<div class="text-uppercase title">lime</div>
+										<div class="color-brand text-white">
+											<div class="bg-lime-lighter">10% lighter</div>
+											<div class="bg-lime-light">5% lighter</div>
+											<div class="bg-lime">base</div>
+											<div class="bg-lime-dark">5% darker</div>
+											<div class="bg-lime-darker">10% darker</div>
+										</div>
+									</div>
+									<div>
+										<div class="text-uppercase title">yellow</div>
+										<div class="color-brand text-white">
+											<div class="bg-yellow-lighter">10% lighter</div>
+											<div class="bg-yellow-light">5% lighter</div>
+											<div class="bg-yellow">base</div>
+											<div class="bg-yellow-dark">5% darker</div>
+											<div class="bg-yellow-darker">10% darker</div>
+										</div>
+									</div>
+									<div>
+										<div class="text-uppercase title">amber</div>
+										<div class="color-brand text-white">
+											<div class="bg-amber-lighter">10% lighter</div>
+											<div class="bg-amber-light">5% lighter</div>
+											<div class="bg-amber">base</div>
+											<div class="bg-amber-dark">5% darker</div>
+											<div class="bg-amber-darker">10% darker</div>
+										</div>
+									</div>
+									<div>
+										<div class="text-uppercase title">orange</div>
+										<div class="color-brand text-white">
+											<div class="bg-orange-lighter">10% lighter</div>
+											<div class="bg-orange-light">5% lighter</div>
+											<div class="bg-orange">base</div>
+											<div class="bg-orange-dark">5% darker</div>
+											<div class="bg-orange-darker">10% darker</div>
+										</div>
+									</div>
+									<div>
+										<div class="text-uppercase title">deeporange</div>
+										<div class="color-brand text-white">
+											<div class="bg-deeporange-lighter">10% lighter</div>
+											<div class="bg-deeporange-light">5% lighter</div>
+											<div class="bg-deeporange">base</div>
+											<div class="bg-deeporange-dark">5% darker</div>
+											<div class="bg-deeporange-darker">10% darker</div>
+										</div>
+									</div>
+									<div>
+										<div class="text-uppercase title">brown</div>
+										<div class="color-brand text-white">
+											<div class="bg-brown-lighter">10% lighter</div>
+											<div class="bg-brown-light">5% lighter</div>
+											<div class="bg-brown">base</div>
+											<div class="bg-brown-dark">5% darker</div>
+											<div class="bg-brown-darker">10% darker</div>
+										</div>
+									</div>
+									<div>
+										<div class="text-uppercase title">grey</div>
+										<div class="color-brand text-white">
+											<div class="bg-grey-lighter">10% lighter</div>
+											<div class="bg-grey-light">5% lighter</div>
+											<div class="bg-grey">base</div>
+											<div class="bg-grey-dark">5% darker</div>
+											<div class="bg-grey-darker">10% darker</div>
+										</div>
+									</div>
+									<div>
+										<div class="text-uppercase title">bluegrey</div>
+										<div class="color-brand text-white">
+											<div class="bg-bluegrey-lighter">10% lighter</div>
+											<div class="bg-bluegrey-light">5% lighter</div>
+											<div class="bg-bluegrey">base</div>
+											<div class="bg-bluegrey-dark">5% darker</div>
+											<div class="bg-bluegrey-darker">10% darker</div>
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-sm-6">
+										<h5>Text color</h5>
+										<p class="text-muted">Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.</p>
+										<p class="text-primary">Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+										<p class="text-success">Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
+										<p class="text-info">Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+										<p class="text-warning">Etiam porta sem malesuada magna mollis euismod.</p>
+										<p class="text-danger">Donec ullamcorper nulla non metus auctor fringilla.</p>
+									</div>
+									<div class="col-sm-6">
+										<h5>Border color</h5>
+										<div class="b-a" style="height:100px;background-color:#e4e4e4"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<footer class="content-section">
+			<div class="container">
+				<div class="row text-center">
+					<div class="col-sm-12 mb25">
+						<p><a href="http://csivit.com" target="_blank" style="text-decoration:none;">Computer Society of India - VIT University</a></p> <small class="show">&copy;&nbsp;Aman Sardana.&nbsp;<span class="year"></span>. All rights reserved.</small></div>
+				</div>
+			</div>
+		</footer>
+		<script src="scripts/docs.js"></script>
+
+	</body>
+</head>
+
+</html>

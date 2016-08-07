@@ -1,0 +1,23 @@
+When new idea is PROPOSED:
+
+<div class="notification-icon">
+    <div class="circle-icon bg-success text-white">
+        <i class="icon-bulb"></i>
+    </div>
+</div>
+
+When idea is DELETED:
+
+<div class="notification-icon">
+    <div class="circle-icon bg-danger text-white">
+        <i class="icon-trash"></i>
+    </div>
+</div>
+
+When idea is EDITED:
+
+<div class="notification-icon">
+    <div class="circle-icon bg-warning text-white">
+        <i class="icon-bulb"></i>
+    </div>
+</div>

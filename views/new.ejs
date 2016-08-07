@@ -1,0 +1,535 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+	<meta charset="utf-8">
+	<title>New Idea | OpenProjects (Beta)</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
+
+	<link rel="stylesheet" href="styles/app.min.css">
+	<link rel="stylesheet" href="vendor/summernote/dist/summernote.css">
+	<link rel="stylesheet" href="vendor/chosen_v1.4.0/chosen.min.css">
+	<link rel="stylesheet" href="vendor/checkbo/src/0.1.4/css/checkBo.min.css">
+	<link rel="stylesheet" href="vendor/sweetalert/dist/sweetalert.css">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.0.2/css/hover-min.css">
+
+</head>
+
+<body class="page-loading">
+
+	<style>
+		.hvr-underline-reveal::before {
+			background: #6164c1;
+		}
+	</style>
+
+	<div class="pageload">
+		<div class="pageload-inner">
+			<div class="sk-cube-grid">
+				<div class="sk-cube sk-cube1"></div>
+				<div class="sk-cube sk-cube2"></div>
+				<div class="sk-cube sk-cube3"></div>
+				<div class="sk-cube sk-cube4"></div>
+				<div class="sk-cube sk-cube5"></div>
+				<div class="sk-cube sk-cube6"></div>
+				<div class="sk-cube sk-cube7"></div>
+				<div class="sk-cube sk-cube8"></div>
+				<div class="sk-cube sk-cube9"></div>
+			</div>
+		</div>
+	</div>
+
+	<div class="app layout-fixed-header">
+
+		<div class="sidebar-panel offscreen-left">
+			<div class="brand">
+
+				<!--<a href="javascript:;" class="toggle-apps hidden-xs" data-toggle="quick-launch">
+					<i class="icon-grid"></i>
+				</a>-->
+
+
+				<div class="toggle-offscreen">
+					<a href="javascript:;" class="visible-xs hamburger-icon" data-toggle="offscreen" data-move="ltr">
+						<span></span>
+						<span></span>
+						<span></span>
+					</a>
+				</div>
+
+
+				<a class="brand-logo" href="./dashboard">
+					<i class="icon-layers hidden-xs hidden-sm" style="padding-right:.9375rem;"></i><span>Open<strong>Projects</strong><sup class="hidden-xs hidden-sm" style="font-size:0.7em;">BETA</sup></span>
+				</a>
+				<a href="#" class="small-menu-visible brand-logo"><i class="icon-layers"></i></a>
+
+			</div>
+
+
+<nav role="navigation">
+				<ul class="nav">
+
+					<li class="active">
+						<a href="./dashboard">
+							<i class="icon-compass"></i>
+							<span>Dashboard</span>
+						</a>
+					</li>
+
+
+					<li>
+						<a href="./newidea">
+							<i class="icon-bulb"></i>
+							<span>Propose a New Idea</span>
+						</a>
+					</li>
+
+					<li>
+						<a href="./editidea">
+							<i class="icon-pencil"></i>
+							<span>Edit My Ideas</span>
+						</a>
+					</li>
+
+					<li>
+						<a href="./ideapool">
+							<i class="icon-magnifier"></i>
+							<span>Idea Pool</span>
+						</a>
+					</li>
+
+					<li>
+						<a href="./profile">
+							<i class="icon-user"></i>
+							<span>Profile</span>
+						</a>
+					</li>
+
+				</ul>
+			</nav>
+
+
+		</div>
+
+
+		<div class="main-panel">
+
+			<div class="header navbar">
+				<div class="brand visible-xs">
+
+					<div class="toggle-offscreen">
+						<a href="javascript:;" class="hamburger-icon visible-xs" data-toggle="offscreen" data-move="ltr">
+							<span></span>
+							<span></span>
+							<span></span>
+						</a>
+					</div>
+
+
+					<a class="brand-logo" href="./dashboard">
+						<i class="icon-layers" style="padding-right:.9375rem;"></i><span>Open<strong>Projects</strong><sup> BETA</sup></span>
+					</a>
+
+				</div>
+				<ul class="nav navbar-nav hidden-xs">
+					<li>
+						<a href="javascript:;" class="small-sidebar-toggle ripple" data-toggle="layout-small-menu">
+							<i class="icon-toggle-sidebar"></i>
+						</a>
+					</li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right hidden-xs">
+					<!--<li>
+						<a href="javascript:;" class="ripple" data-toggle="dropdown">
+							<span>EN</span>
+							<span class="caret"></span>
+						</a>
+						<ul class="dropdown-menu">
+							<li>
+								<a href="javascript:;">English</a>
+							</li>
+							<li>
+								<a href="javascript:;">Russian</a>
+							</li>
+							<li>
+								<a href="javascript:;">French</a>
+							</li>
+							<li>
+								<a href="javascript:;">Spanish</a>
+							</li>
+						</ul>
+					</li>-->
+
+					<!--Notification Menu-->
+					<li>
+						<a href="javascript:;" class="ripple" data-toggle="dropdown">
+							<i class="icon-bell"></i>
+						</a>
+						<ul class="dropdown-menu notifications">
+							<!--<li class="notifications-header">
+								<p class="text-muted small">You have 3 new messages</p>
+							</li>-->
+							<li>
+								<ul class="notifications-list">
+								<% for(var i=0;i<notifications.length;i++) { %>
+									<li>
+										<a href="<%=notifications[i].link%>">
+
+											<span class="notification-message"><%= notifications[i].message%></span>
+											<time class="timeago pull-right m-r text-muted" datetime="<%=notifications[i].timestamp%>"></time>
+										</a>
+									</li>
+								<% } %>
+								</ul>
+							</li>
+						</ul>
+					</li>
+
+					<!--User Profile Section-->
+					<li>
+						<a href="javascript:;" class="ripple" data-toggle="dropdown">
+							<img src="<%-profilepicurl%>" class="header-avatar img-circle" alt="user" title="user" style="margin-right: 5px;">
+							<span><%=name%></span>
+							<span class="caret"></span>
+						</a>
+						<ul class="dropdown-menu">
+							<li>
+								<a href="./profile">My Profile</a>
+							</li>
+							<!--
+							<li>
+								<a href="javascript:;">
+									<span class="label bg-danger pull-right">34</span>
+									<span>Notifications</span>
+								</a>
+							</li>-->
+							<li role="separator" class="divider"></li>
+							<!--<li>
+								<a href="javascript:;">Help</a>
+							</li>-->
+							<li>
+								<a href="./logout">Logout</a>
+							</li>
+						</ul>
+					</li>
+
+					<!--Team Chat-->
+
+					<!--<li>
+						<a href="javascript:;" class="ripple" data-toggle="layout-chat-open">
+							<i class="icon-user"></i>
+						</a>
+					</li>-->
+				</ul>
+			</div>
+
+
+			<div class="main-content">
+
+				<div class="m-x-n-g m-t-n-g overflow-hidden">
+					<div class="card m-b-0 bg-primary-dark text-white p-a-md no-border">
+
+						<h4>Propose A New Idea</h4>
+						<p>Tedious, we know! It's only a one time thing.</p>
+						<!--<div class="row">
+							<div class="col-md-2">
+								<div class="row">
+									<img src="images/animat-lightbulb-color.gif" style="height:auto; width:auto; max-width:70px; max-height:70px;">
+									<img src="images/animat-pencil-color.gif" style="height:auto; width:auto; max-width:70px; max-height:70px;">
+								</div>
+							</div>
+							<div class="col-md-10 m-t">
+								<div class="title">Propose A New Idea</div>
+								<div class="sub-title">Details of your project below. Tedious, we know! It's only a one time thing.</div>
+							</div>
+
+						</div>-->
+
+					</div>
+
+				</div>
+				<div class="card bg-white m-t-md" style="box-shadow: 0 .125rem .25rem rgba(50, 70, 75, .2);">
+					<div class="card-block">
+						<div class="row m-a-0">
+							<div class="col-lg-12">
+								<form class="form-horizontal" role="form" action="./newidea" method="POST">
+
+									<div class="form-group">
+										<label class="col-sm-2 control-label">Title/Project Name</label>
+										<div class="col-sm-10">
+											<input type="text" name="ptitle" class="form-control" placeholder="Use of creativity is appreciated." required>
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="col-sm-2 control-label">Short Description</label>
+										<div class="col-sm-10">
+											<input type="text" name="sdesc" class="form-control m-b" id="maxlength" maxlength="300" required>
+										</div>
+									</div>
+
+									<hr>
+
+									<div class="form-group">
+									<label class="col-sm-2 control-label">Long Description</label>
+									<div class="col-sm-10">
+										<textarea name="ldesc" class="summernote" required>Use this space to clearly define your project idea. Focus purely on the idea, not the requirements/dependencies.</textarea>
+										<div class="m-b-md clearfix"></div>
+									</div>
+									</div>
+
+									<hr>
+
+									<div class="form-group">
+										<label class="col-sm-2 control-label">Timespan</label>
+										<div class="col-sm-4">
+											<select class="cs-select" name="timespan">
+												<option value="Less than 2 weeks">Less than 2 weeks
+													<option value="2 - 4 weeks">2 - 4 weeks
+														<option selected="selected" value="4 - 6 weeks">4 - 6 weeks
+															<option value="More than 6 weeks">More than 6 weeks
+																<option value="Semester Long">Semester-long
+											</select>
+										</div>
+									</div>
+
+									<div class="form-group">
+										<!--<p>Multiple Select</p>-->
+										<label class="col-sm-2 control-label">Facets</label>
+										<div class="col-sm-10">
+											<select name="skills" data-placeholder="Skills your project requires (Excluding your area of expertise)." multiple="" class="chosen" style="width: 100%;" required>
+												<option value="Manager/Business Analyst">Manager/Business Analyst
+													<option value="Designer (UI + Branding)">Designer (UI + Branding)
+														<option value="Backend Developer">Backend Developer
+															<option value="Windows Developer">Windows Developer
+																<option value="Android Developer">Android Developer
+																	<option value="iOS Developer">iOS Developer
+																		<option value="UX/Workflow Designer">UX/Workflow Designer
+																			<option value="Frontend Developer">Frontend Developer
+																				<option value="Sponsorship">Sponsorship
+											</select>
+										</div>
+									</div>
+
+
+									<div class="form-group checkbo">
+										<!--<h5>Platforms targetted</h5>-->
+										<label class="col-sm-2 control-label">Platforms targetted</label>
+										<div class="col-sm-10">
+											<label class="cb-checkbox cb-md">
+												<input type="checkbox" name="windows" value="yes">Windows (UWP)
+											</label>
+											<br>
+											<label class="cb-checkbox cb-md">
+												<input type="checkbox" name="web" value="yes">Web
+											</label>
+											<br>
+											<label class="cb-checkbox cb-md">
+												<input type="checkbox" name="android" value="yes">Android/Chrome/Chromium
+											</label>
+											<br>
+											<label class="cb-checkbox cb-md">
+												<input type="checkbox" name="ios" value="yes">iOS
+											</label>
+											<br>
+<!--											<label class="cb-checkbox cb-md">
+												<input type="checkbox" name="firefox" value="yes">Firefox OS
+											</label>
+											<br>-->
+										</div>
+									</div>
+
+									<hr>
+
+									<div class="form-group">
+										<label class="col-sm-2 control-label">Target Audience</label>
+										<div class="col-sm-10">
+											<textarea name="targetaudience" class="form-control" rows="2" placeholder="Mention all demographics - approximate number/outreach, region, average target audience age. Focus specially on scalabilty." style="resize:none;" required></textarea>
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label class="col-sm-2 control-label">Funding Needed (if any)</label>
+										<div class="col-sm-10">
+											<textarea name="funding" class="form-control" rows="2" placeholder="Where will you be using this funding?" style="resize:none;" required></textarea>
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label class="col-sm-2 control-label">External/Internal Resources</label>
+										<div class="col-sm-10">
+											<textarea name="extres" class="form-control" rows="2" placeholder="Libraries/Frameworks/Dependecies/Tech to be used - if you know them already. Try to be specific. Example: Bootstrap, Django, Parse." style="resize:none;" required></textarea>
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label class="col-sm-2 control-label">Past Experience</label>
+										<div class="col-sm-10">
+											<textarea name="pastexp" class="form-control" rows="2" placeholder="Any past experience in building something similar to this idea OR using the tech that you've mentioned above?" style="resize:none;" required></textarea>
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label class="col-sm-2 control-label">Competition</label>
+										<div class="col-sm-10">
+											<textarea name="competition" class="form-control" rows="2" placeholder="Is there anything similar to your idea that already exists out there?" style="resize:none;" required></textarea>
+										</div>
+									</div>
+									
+								<div class="row m-t-md m-b">
+									<div class="col-lg-3 col-md-4 col-sm-4 pull-right">
+										<button type="submit" class="btn btn-primary btn-block">
+											<span>I'm Done! Send For Approval<i class="icon-like" style="margin-left:5px;"></i></span>
+										</button>
+									</div>
+
+								</div>
+
+
+
+								</form>
+
+								
+
+							</div>
+						</div>
+
+					</div>
+				</div>
+				<!--Card-->
+
+
+			</div>
+			<!--Main Content-->
+
+		</div>
+
+
+		<footer class="content-footer hidden-xs" style="bottom:0px; position:fixed;">
+			<nav class="footer-right">
+				<ul class="nav">
+					<li>
+						<a class="hvr-underline-reveal" href="javascript:;" data-toggle="modal" data-target="#feedback">Feedback</a>
+					</li>
+
+				</ul>
+			</nav>
+			<nav class="footer-left">
+				<ul class="nav">
+					<li>
+						<a href="documentation/index.html" target="_blank">Official Documentation</a>
+					</li>
+					<li>
+						<a class="scroll-up" href="javascript:;"><i class="fa fa-angle-up"></i></a>
+					</li>
+				</ul>
+			</nav>
+		</footer>
+
+		<div id="feedback" class="modal fade bs-modal-sm" tabindex="-1" role="dialog" aria-hidden="true">
+			<div class="modal-dialog">
+
+				<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-header text-center">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Tell us what you think of
+							<span style="font-family: Montserrat">Open<b>Projects</b><sup>BETA</sup></span></h4>
+					</div>
+					<div class="modal-body text-center align-middle">
+						<p>
+							<b>"</b>Software undergoes beta testing shortly before it’s released. Beta is Latin for <i>still doesn’t work</i>.<b>"</b>
+							<br>
+							<!--<br><b>You'll be the first to know!</b></p>-->
+							<form class="form-horizontal text-center align-middle" role="form">
+								<!--<input type="text" class="form-control m-t" placeholder="Name" style="margin:0 auto; width:300px;">
+<input type="email" class="form-control m-t" placeholder="Email ID" style="margin:0 auto; width:300px;">-->
+								<textarea class="form-control m-t" rows="4" placeholder="Curse us or applaud us if you'd like! Suggestions are always welcome." style="resize:none; margin:0 auto; width:500px;" required></textarea>
+							</form>
+					</div>
+					<div class="modal-footer no-border align-middle text-center">
+						<!--<button type="button" class="btn btn-default hvr-icon-back" data-dismiss="modal"><span style="margin-left:5px;">Back</span></button>-->
+						<button type="button" class="btn btn-primary hvr-icon-wobble-horizontal"><span style="margin-right:5px;">Submit</span></button>
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+
+
+	</div>
+	<!--App-->
+	<script src="scripts/app.min.js"></script>
+
+	<script src="vendor/chosen_v1.4.0/chosen.jquery.min.js"></script>
+	<script src="vendor/jquery.tagsinput/src/jquery.tagsinput.js"></script>
+	<script src="vendor/checkbo/src/0.1.4/js/checkBo.min.js"></script>
+	<script src="vendor/intl-tel-input/build/js/intlTelInput.min.js"></script>
+	<script src="vendor/moment/min/moment.min.js"></script>
+	<script src="vendor/bootstrap-daterangepicker/daterangepicker.js"></script>
+	<script src="vendor/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+	<script src="vendor/bootstrap-timepicker/js/bootstrap-timepicker.min.js"></script>
+	<script src="vendor/clockpicker/dist/jquery-clockpicker.min.js"></script>
+	<script src="vendor/mjolnic-bootstrap-colorpicker/dist/js/bootstrap-colorpicker.min.js"></script>
+	<script src="vendor/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.js"></script>
+	<script src="vendor/select2/dist/js/select2.js"></script>
+	<script src="vendor/selectize/dist/js/standalone/selectize.min.js"></script>
+	<script src="vendor/jquery-labelauty/source/jquery-labelauty.js"></script>
+	<script src="vendor/bootstrap-maxlength/bootstrap-maxlength.min.js"></script>
+	<script src="vendor/typeahead.js/dist/typeahead.bundle.js"></script>
+	<script src="vendor/multiselect/js/jquery.multi-select.js"></script>
+
+
+	<script src="scripts/forms/plugins.js"></script>
+
+
+	<script src="scripts/app.min.js"></script>
+
+	<script src="vendor/bootstrap3-wysihtml5-bower/dist/bootstrap3-wysihtml5.all.min.js"></script>
+	<script src="vendor/summernote/dist/summernote.min.js"></script>
+
+
+	<script src="scripts/forms/wysiwyg.js"></script>
+
+
+	<script src="scripts/app.min.js"></script>
+
+
+	<script src="vendor/bootstrap-maxlength/bootstrap-maxlength.min.js"></script>
+
+
+	<script src="scripts/helpers/classie.js"></script>
+	<script src="scripts/helpers/inputfx.js"></script>
+	<script src="scripts/helpers/selectfx.js"></script>
+
+	<script>
+		(function () {
+          [].slice.call(document.querySelectorAll('select.cs-select')).forEach(function (el) {
+				new SelectFx(el);
+			});
+		})();
+	</script>
+
+
+
+	<script src="vendor/checkbo/src/0.1.4/js/checkBo.min.js"></script>
+
+	<script src="vendor/sweetalert/dist/sweetalert.min.js"></script>
+
+
+	<script src="scripts/ui/alert.js"></script>
+
+
+	<script type="text/javascript">
+		$("[data-toggle=tooltip]").tooltip();
+		$("[data-toggle=popover]")
+			.popover()
+			.click(function (e) {
+				e.preventDefault();
+			});
+	</script>
+</body>
+
+</html>

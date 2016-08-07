@@ -1,0 +1,495 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+	<meta charset="utf-8">
+	<title>My Profile | OpenProjects (Beta)</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="vendor/chosen_v1.4.0/chosen.min.css">
+
+	<link rel="stylesheet" href="vendor/jquery-labelauty/source/jquery-labelauty.css">
+	<link rel="stylesheet" href="styles/app.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.0.2/css/hover-min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-switch/3.3.2/css/bootstrap3/bootstrap-switch.min.css">
+
+	<style>
+		.hvr-underline-reveal::before {
+			background: #6164c1;
+		}
+	</style>
+
+</head>
+
+<body class="page-loading">
+
+	<div class="pageload">
+		<div class="pageload-inner">
+			<div class="sk-cube-grid">
+				<div class="sk-cube sk-cube1"></div>
+				<div class="sk-cube sk-cube2"></div>
+				<div class="sk-cube sk-cube3"></div>
+				<div class="sk-cube sk-cube4"></div>
+				<div class="sk-cube sk-cube5"></div>
+				<div class="sk-cube sk-cube6"></div>
+				<div class="sk-cube sk-cube7"></div>
+				<div class="sk-cube sk-cube8"></div>
+				<div class="sk-cube sk-cube9"></div>
+			</div>
+		</div>
+	</div>
+
+	<div class="app layout-fixed-header">
+
+		<div class="sidebar-panel offscreen-left">
+			<div class="brand">
+
+				<!--<a href="javascript:;" class="toggle-apps hidden-xs" data-toggle="quick-launch">
+					<i class="icon-grid"></i>
+				</a>-->
+
+
+				<div class="toggle-offscreen">
+					<a href="javascript:;" class="visible-xs hamburger-icon" data-toggle="offscreen" data-move="ltr">
+						<span></span>
+						<span></span>
+						<span></span>
+					</a>
+				</div>
+
+
+				<a class="brand-logo" href="./dashboard">
+					<i class="icon-layers hidden-xs hidden-sm" style="padding-right:.9375rem;"></i><span>Open<strong>Projects</strong><sup class="hidden-xs hidden-sm" style="font-size:0.7em;">BETA</sup></span>
+				</a>
+				<a href="#" class="small-menu-visible brand-logo"><i class="icon-layers"></i></a>
+
+			</div>
+
+
+<nav role="navigation">
+				<ul class="nav">
+
+					<li class="active">
+						<a href="./dashboard">
+							<i class="icon-compass"></i>
+							<span>Dashboard</span>
+						</a>
+					</li>
+
+
+					<li>
+						<a href="./newidea">
+							<i class="icon-bulb"></i>
+							<span>Propose a New Idea</span>
+						</a>
+					</li>
+
+					<li>
+						<a href="./editidea">
+							<i class="icon-pencil"></i>
+							<span>Edit My Ideas</span>
+						</a>
+					</li>
+
+					<li>
+						<a href="./ideapool">
+							<i class="icon-magnifier"></i>
+							<span>Idea Pool</span>
+						</a>
+					</li>
+
+					<li>
+						<a href="./profile">
+							<i class="icon-user"></i>
+							<span>Profile</span>
+						</a>
+					</li>
+
+				</ul>
+			</nav>
+
+		</div>
+
+
+		<div class="main-panel">
+
+			<div class="header navbar">
+				<div class="brand visible-xs">
+
+					<div class="toggle-offscreen">
+						<a href="javascript:;" class="hamburger-icon visible-xs" data-toggle="offscreen" data-move="ltr">
+							<span></span>
+							<span></span>
+							<span></span>
+						</a>
+					</div>
+
+
+					<a class="brand-logo" href="./dashboard">
+						<i class="icon-layers" style="padding-right:.9375rem;"></i><span>Open<strong>Projects</strong><sup> BETA</sup></span>
+					</a>
+
+				</div>
+				<ul class="nav navbar-nav hidden-xs">
+					<li>
+						<a href="javascript:;" class="small-sidebar-toggle ripple" data-toggle="layout-small-menu">
+							<i class="icon-toggle-sidebar"></i>
+						</a>
+					</li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right hidden-xs">
+
+					<!--Notification Menu-->
+					<li>
+						<a href="javascript:;" class="ripple" data-toggle="dropdown">
+							<i class="icon-bell"></i>
+						</a>
+						<ul class="dropdown-menu notifications">
+							<!--<li class="notifications-header">
+								<p class="text-muted small">You have 3 new messages</p>
+							</li>-->
+
+								<ul class="notifications-list">
+									<% for(var i=0;i<notifications.length;i++) { %>
+										<li>
+											<a href="<%=notifications[i].link%>">
+	
+												<span class="notification-message"><%= notifications[i].message%></span>
+												<time class="timeago pull-right m-r text-muted" datetime="<%=notifications[i].timestamp%>"></time>
+											</a>
+										</li>
+									<% } %>
+								</ul>
+							</li>
+						</ul>
+					</li>
+
+					<!--User Profile Section-->
+					<li>
+						<a href="javascript:;" class="ripple" data-toggle="dropdown">
+							<img src="<%-profilepicurl%>" class="header-avatar img-circle" alt="user" title="user" style="margin-right: 5px;">
+							<span><%= name %></span>
+							<span class="caret"></span>
+						</a>
+						<ul class="dropdown-menu">
+							<li>
+								<a href="./profile">My Profile</a>
+							</li>
+							<!--
+							<li>
+								<a href="javascript:;">
+									<span class="label bg-danger pull-right">34</span>
+									<span>Notifications</span>
+								</a>
+							</li>-->
+							<li role="separator" class="divider"></li>
+							<!--<li>
+								<a href="javascript:;">Help</a>
+							</li>-->
+							<li>
+								<a href="./logout">Logout</a>
+							</li>
+						</ul>
+					</li>
+
+				</ul>
+			</div>
+
+
+			<div class="main-content">
+				<div class="m-x-n-g m-t-n-g overflow-hidden">
+					<div class="card m-b-0 bg-primary-dark text-white p-a-md no-border">
+						<div class="row">
+							<div class="col-xs-6">
+								<h3><%= name %>  <sup class="hidden-xs" style="top: -0.8em;"><input type="checkbox" name="free" data-on-text="Free" data-off-text="Busy" data-on-color="success" data-off-color="danger" data-size="mini" <%if(free){%> checked="checked" <%} %>></sup></h3>
+								<h5 class="hidden-xs hidden-sm"><%= skillist%></h5>
+								<!--<div class="row">
+							<div class="col-md-2">
+								<div class="row">
+									<img src="images/animat-lightbulb-color.gif" style="height:auto; width:auto; max-width:70px; max-height:70px;">
+									<img src="images/animat-pencil-color.gif" style="height:auto; width:auto; max-width:70px; max-height:70px;">
+								</div>
+							</div>
+							<div class="col-md-10 m-t">
+								<div class="title">Propose A New Idea</div>
+								<div class="sub-title">Details of your project below. Tedious, we know! It's only a one time thing.</div>
+							</div>
+
+						</div>-->
+							</div>
+
+							<div class="profile-stats text-center hidden-xs">
+
+								<div class="col-xs-4">
+									<h4 class="m-t-md m-b-0"><%=rating%> <i class="icon-star"></i></h4>
+									<small>Admin Rating</small>
+								</div>
+								<div class="col-xs-4">
+									<h4 class="m-t-md m-b-0"><%if (compper) {%><%=compper%><%} else{%> 0<%}%>%</h4>
+									<small>Completion Rate</small>
+								</div>
+								<div class="col-xs-4">
+									<h4 class="m-t-md m-b-0"><%=comp%></h4>
+									<small>Projects Completed</small>
+								</div>
+
+
+
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+
+
+				<div class="row">
+
+					<div class="col-md-12 text-center">
+
+						<div class="text-center align-middle">
+							<img src="<%-profilepicurl%>" alt="" class="img-thumbnail img-circle m-t-md m-r-md hvr-bob" style="height:150px;">
+							<img src="images/teamlogo.png" alt="" class="img-thumbnail img-circle m-t-md m-l-md hvr-bob" style="height:150px;">
+							<!--style="height:100px;"-->
+						</div>
+
+
+					</div>
+
+				</div>
+
+
+				<div class="card bg-white m-t-md" style="box-shadow: 0 .125rem .25rem rgba(50, 70, 75, .2);">
+					<div class="card-block">
+						<div class="row m-a-0">
+							<div class="col-lg-12">
+
+								<div class="row m-t-md">
+									<div class="col-sm-3">
+										<div class="card card-block bg-white">
+											<h5 class="card-title">Project Ideas Proposed (Pending Approval)</h5>
+											<!--<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>-->
+											<ol>
+												<% for(var i=0; i<userwaitideas.length; i++) {%>
+												   <li><%= userwaitideas[i] %></li>
+												<% } %>
+											</ol>
+											<!--<a href="javascript:;" class="btn btn-primary">Go somewhere</a>-->
+										</div>
+									</div>
+									<div class="col-sm-3">
+										<div class="card card-block bg-white">
+											<h5 class="card-title">Project Ideas Approved</h5>
+											<ol>
+												<% for(var i=0; i<userapprovedideas.length; i++) {%>
+												   <li><%= userapprovedideas[i] %></li>
+												<% } %>
+											</ol>
+											<!--<a href="javascript:;" class="btn btn-primary">Go somewhere</a>-->
+										</div>
+									</div>
+									<div class="col-sm-3">
+										<div class="card card-block bg-white">
+											<h5 class="card-title">Projects Applied To (Pending Approval)</h5>
+											<ol>
+												<% for(var i=0; i<unconfirmedideas.length; i++) {%>
+												   <li><%= unconfirmedideas[i] %></li>
+												<% } %>
+
+											</ol>
+											<!--<a href="javascript:;" class="btn btn-primary">Go somewhere</a>-->
+										</div>
+									</div>
+									<div class="col-sm-3">
+										<div class="card card-block bg-white">
+											<h5 class="card-title">Currently Working On</h5>
+											<ol>
+												<% for(var i=0; i<workingideas.length; i++) {%>
+												   <li><%= workingideas[i] %></li>
+												<% } %>
+
+											</ol>
+											<!--<a href="javascript:;" class="btn btn-primary">Go somewhere</a>-->
+										</div>
+									</div>
+
+								</div>
+								<hr>
+
+								<div class="row">
+									
+									<form action="/updateskills" method="POST">
+									<div class="col-md-6">
+										<div class="card bg-white m-b">
+											<div class="card-header bg-primary">
+												<h4>Your Skillset</h4>
+											</div>
+											<div class="card-block">
+												<div class="m-b">
+													<select name="skills" data-placeholder="Your Skills" multiple="" class="chosen" style="width: 100%;">
+														<option <% if (skills.indexOf('Manager/Business Analyst') > -1){ %> selected <% } %> value="Manager/Business Analyst">Manager/Business Analyst</option>
+														<option <% if (skills.indexOf('Designer (UI + Branding)') > -1){ %> selected <% } %>value="Designer (UI + Branding)">Designer (UI + Branding)</option>
+														<option <% if (skills.indexOf('Backend Developer') > -1){ %> selected <% } %>value="Backend Developer">Backend Developer</option>
+														<option <% if (skills.indexOf('Windows Developer') > -1){ %> selected <% } %>value="Windows Developer">Windows Developer</option>
+														<option <% if (skills.indexOf('Android Developer') > -1){ %> selected <% } %>value="Android Developer">Android Developer</option>
+														<option <% if (skills.indexOf('iOS Developer') > -1){ %> selected <% } %>value="iOS Developer">iOS Developer</option>
+														<option <% if (skills.indexOf('UX/Workflow Designer') > -1){ %> selected <% } %>value="UX/Workflow Designer">UX/Workflow Designer</option>
+														<option <% if (skills.indexOf('Frontend Developer') > -1){ %> selected <% } %>value="Frontend Developer">Frontend Developer</option>
+														<option <% if (skills.indexOf('Sponsorship') > -1){ %> selected <% } %>value="Sponsorship">Sponsorship</option>
+													</select>
+													<button type="submit" class="btn btn-primary m-t-md">Update</button>
+
+
+												</div>
+											</div>
+										</div>
+										</form>
+
+									</div>
+
+									<div class="col-md-6">
+
+										<div class="card bg-white m-b">
+											<div class="card-header bg-primary">
+												<h4>Professional Networks</h4>
+											</div>
+											<div class="card-block">
+												<div class="m-b">
+													<a href="http://github.com/<%= github %>" target="_blank"><h5>github.com/<%= github %></h5></a>
+													<a href="https://in.linkedin.com/in/<%= linkedin %>" target="_blank"><h5>linkedin.com/<%=linkedin%></h5></a>
+												</div>
+											</div>
+										</div>
+
+
+									</div>
+
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+
+		<footer class="content-footer hidden-xs" style="bottom:0px; position:fixed;">
+			<nav class="footer-right">
+				<ul class="nav">
+					<li>
+						<a class="hvr-underline-reveal" href="javascript:;" data-toggle="modal" data-target="#feedback">Feedback</a>
+					</li>
+
+				</ul>
+			</nav>
+			<nav class="footer-left">
+				<ul class="nav">
+					<li>
+						<a href="documentation/index.html" target="_blank">Official Documentation</a>
+					</li>
+					<li>
+						<a class="scroll-up" href="javascript:;"><i class="fa fa-angle-up"></i></a>
+					</li>
+				</ul>
+			</nav>
+		</footer>
+
+		<div id="feedback" class="modal fade bs-modal-sm" tabindex="-1" role="dialog" aria-hidden="true">
+			<div class="modal-dialog">
+
+				<!-- Modal content-->
+				<div class="modal-content">
+				<form class="form-horizontal text-center align-middle" role="form" method="POST" action="./feedback">
+					<div class="modal-header text-center">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Tell us what you think of
+							<span style="font-family: Montserrat">Open<b>Projects</b><sup>BETA</sup></span></h4>
+					</div>
+					<div class="modal-body text-center align-middle">
+						<p>
+							<b>"</b>Software undergoes beta testing shortly before it’s released. Beta is Latin for <i>still doesn’t work</i>.<b>"</b>
+							<br>
+							<!--<br><b>You'll be the first to know!</b></p>-->
+								<!--<input type="text" class="form-control m-t" placeholder="Name" style="margin:0 auto; width:300px;">
+<input type="email" class="form-control m-t" placeholder="Email ID" style="margin:0 auto; width:300px;">-->
+								<textarea name="feedback" class="form-control m-t" rows="4" placeholder="Curse us or applaud us if you'd like! Suggestions are always welcome." style="resize:none; margin:0 auto; width:500px;"></textarea>
+					</div>
+					<div class="modal-footer no-border align-middle text-center">
+						<!--<button type="button" class="btn btn-default hvr-icon-back" data-dismiss="modal"><span style="margin-left:5px;">Back</span></button>-->
+						<button type="Submit" class="btn btn-primary hvr-icon-wobble-horizontal"><span style="margin-right:5px;">Submit</span></button>
+					</div>
+				</form>
+				</div>
+
+			</div>
+		</div>
+
+
+
+	</div>
+
+	<script src="scripts/app.min.js"></script>
+
+	<script src="vendor/chosen_v1.4.0/chosen.jquery.min.js"></script>
+	<script src="vendor/jquery.tagsinput/src/jquery.tagsinput.js"></script>
+	<script src="vendor/checkbo/src/0.1.4/js/checkBo.min.js"></script>
+	<script src="vendor/intl-tel-input/build/js/intlTelInput.min.js"></script>
+	<script src="vendor/moment/min/moment.min.js"></script>
+	<script src="vendor/bootstrap-daterangepicker/daterangepicker.js"></script>
+	<script src="vendor/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+	<script src="vendor/bootstrap-timepicker/js/bootstrap-timepicker.min.js"></script>
+	<script src="vendor/clockpicker/dist/jquery-clockpicker.min.js"></script>
+	<script src="vendor/mjolnic-bootstrap-colorpicker/dist/js/bootstrap-colorpicker.min.js"></script>
+	<script src="vendor/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.js"></script>
+	<script src="vendor/select2/dist/js/select2.js"></script>
+	<script src="vendor/selectize/dist/js/standalone/selectize.min.js"></script>
+	<script src="vendor/jquery-labelauty/source/jquery-labelauty.js"></script>
+	<script src="vendor/bootstrap-maxlength/bootstrap-maxlength.min.js"></script>
+	<script src="vendor/typeahead.js/dist/typeahead.bundle.js"></script>
+	<script src="vendor/multiselect/js/jquery.multi-select.js"></script>
+	<script src="vendor/jquery-labelauty/source/jquery-labelauty.js"></script>
+	<script src="scripts/forms/plugins.js"></script>
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-switch/3.3.2/js/bootstrap-switch.min.js"></script>
+	<script type="text/javascript">
+		$("[name='free']").bootstrapSwitch();
+		
+		$('input[name="free"]').on('switchChange.bootstrapSwitch', function(event,state) {
+			
+			/*console.log(this);
+			console.log(event);
+			console.log(state);*/
+			
+			if(this.checked){
+       		console.log('1')
+            $.ajax({
+                type: "GET",
+                url: './setfree?free=1'
+            });
+       }
+        else{
+        	console.log('0')
+            $.ajax({
+                type: "GET",
+                url: './setfree?free=0'
+            });
+
+            }
+			
+		});
+		
+	</script>
+	
+	<script type="text/javascript">
+		$("[data-toggle=tooltip]").tooltip();
+		$("[data-toggle=popover]")
+			.popover()
+			.click(function (e) {
+				e.preventDefault();
+			});
+	</script>
+</body>
+
+</html>

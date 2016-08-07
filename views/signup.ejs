@@ -1,0 +1,190 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+	<meta charset="utf-8">
+	<title>Sign Up | OpenProjects (Beta)</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
+
+	<link rel="stylesheet" href="styles/app.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.0.2/css/hover-min.css">
+
+	<style>
+		.hvr-underline-reveal::before {
+			background: #6164c1;
+		}
+		
+		.fileUpload {
+			position: relative;
+			overflow: hidden;
+			margin: 10px;
+		}
+		
+		.fileUpload input.upload {
+			position: absolute;
+			top: 0;
+			right: 0;
+			margin: 0;
+			padding: 0;
+			font-size: 20px;
+			cursor: pointer;
+			opacity: 0;
+			filter: alpha(opacity=0);
+		}
+	</style>
+
+
+
+</head>
+
+
+
+<body class="page-loading" style="border-top:7px solid #6164c1; overflow:auto;">
+	<div class="pageload">
+		<div class="pageload-inner">
+			<div class="sk-cube-grid">
+				<div class="sk-cube sk-cube1"></div>
+				<div class="sk-cube sk-cube2"></div>
+				<div class="sk-cube sk-cube3"></div>
+				<div class="sk-cube sk-cube4"></div>
+				<div class="sk-cube sk-cube5"></div>
+				<div class="sk-cube sk-cube6"></div>
+				<div class="sk-cube sk-cube7"></div>
+				<div class="sk-cube sk-cube8"></div>
+				<div class="sk-cube sk-cube9"></div>
+			</div>
+		</div>
+	</div>
+
+	<div class="app signup usersession bg-white">
+		<div class="session-wrapper">
+			<div class="page-height-o row-equal align-middle">
+				<div class="column">
+					<div class="card bg-white no-border">
+						<div class="card-block">
+							
+								<div class="text-center m-b">
+									<p class="p-t-md" style="font-family:Montserrat;text-transform:uppercase;"><%=message%></p>
+									<h4 class="text-uppercase">Glad to have you on board!</h4>
+									<p>Fill this in and you are good to go.</p>
+								</div>
+								<div class="form-inputs">
+									<!--<div class="row m-t m-b text-center">
+
+										<div class="col-md-4">
+											<img src="images/man.png" alt="" class="img-thumbnail img-circle m-r-md hvr-wobble-horizontal">
+											Replace man.png with user's upload
+										</div>
+
+										<div class="col-md-8 m-t-lg m-l-0">
+
+
+											<div class="fileUpload btn btn-dark text-white">
+												<span>Upload A Better Picture, maybe?</span>
+												<input type="file" class="upload" />
+
+											</div>
+
+										</div>
+
+									</div>-->
+									<div class="row m-t m-b text-center">
+										<img id="thumb" src="images/man.png" alt="" class="img-thumbnail img-circle m-r-md hvr-wobble-horizontal" style="height:130px;">
+									</div>
+									<form id="newHotnessForm" action="/avatar/upload" method="POST">
+									<div class="row m-b text-center">
+										<div class="fileUpload btn btn-dark text-white">
+											<span>Upload A Better Picture, maybe?</span>
+											<input type="file" name="avatar" class="upload" id="imageUpload"/>
+											
+
+										</div>
+									</div>
+									</form>
+
+								<form role="form" class="form-layout" action="./signup" method="POST">
+									<div class="name">
+										<!--<label class="text-uppercase">Name</label>-->
+										<input type="text" name="firstname" class="form-control input-lg first" placeholder="First Name" required="">
+										<input type="text" name="lastname" class="form-control input-lg" placeholder="Last Name" required="">
+									</div>
+									<!--<label class="text-uppercase">Your current email address</label>-->
+									<input type="email" name="email" class="form-control input-lg" placeholder="Email Address" required="">
+									<!--<label class="text-uppercase">Choose your username</label>-->
+									<input type="text" name="username" class="form-control input-lg" placeholder="Username" required="">
+									<!--<label class="text-uppercase">Create a password</label>-->
+									<input type="password" name= "password" class="form-control input-lg" placeholder="Password">
+									<input type="text" name="github" class="form-control input-lg" placeholder="GitHub Username">
+									<!--<label class="text-uppercase">Confirm your password</label>-->
+									<input type="text" name= "linkedin" class="form-control input-lg" placeholder="LinkedIn Username">
+									<input type="hidden" name="accesscode" value="<%=accesscode%>" required="">
+									<input type="hidden" id="profilepic" name="profilepic" value="man.png" >
+								</div>
+								<button class="btn btn-primary btn-block btn-lg m-b" type="submit">Let's Go!</button>
+								<p class="text-center"><small>By clicking the button above you agree to sign up as an exclusive beta tester for <span style="font-family:Montserrat;">Open<b>Projects</b><sup>BETA</sup></span></small>
+								</p>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<footer class="session-footer hidden-xs" style="bottom:0px; position:fixed;">
+			<nav class="footer-right">
+				<ul class="nav">
+					<li>
+						<a href="http://csivit.com" class="hvr-underline-reveal" target="_blank">CSI - VITU</a>
+					</li>
+					<!--<li>
+						<a href="javascript:;" class="scroll-up">
+							<i class="fa fa-angle-up"></i>
+						</a>
+					</li>-->
+				</ul>
+			</nav>
+			<nav class="footer-left">
+				<ul class="nav">
+					<li>
+						<a href="documentation/index.html" target="_blank">Official Documentation</a>
+					</li>
+					<!--	<li>
+						<a href="javascript:;" class="hvr-underline-reveal" data-toggle="popover" data-placement="top" title="" data-content="Aman Sardana, Subash SN">Developers</a>
+					</li>-->
+				</ul>
+			</nav>
+		</footer>
+
+	</div>
+	<script src="scripts/app.min.js"></script>
+	<script src="scripts/ajaxupload.js"></script>
+	
+	<script type="text/javascript">
+	$(document).ready(function(){
+
+  var thumb = $('img#thumb');
+  var profilepic = $('#profilepic');
+
+  new AjaxUpload('imageUpload', {
+    action: $('form#newHotnessForm').attr('action'),
+    name: 'avatar',
+    onSubmit: function(file, extension) {
+      $('div.preview').addClass('loading');
+    },
+    onComplete: function(file, response) {
+      thumb.load(function(){
+        $('div.preview').removeClass('loading');
+        thumb.unbind();
+      });
+      thumb.attr('src', 'avatar?id='+response);
+      profilepic.attr('value', response);
+    }
+  });
+  
+});
+	
+	</script>
+</body>
+
+</html>

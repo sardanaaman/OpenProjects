@@ -1,0 +1,713 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+	<meta charset="utf-8">
+	<title>Idea Pool | OpenProjects (Beta)</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="vendor/ioslist/dist/css/jquery.ioslist.css">
+
+
+	<link rel="stylesheet" href="vendor/jquery-labelauty/source/jquery-labelauty.css">
+	<link rel="stylesheet" href="styles/app.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.0.2/css/hover-min.css">
+
+	<style>
+		.hvr-underline-reveal::before {
+			background: #6164c1;
+		}
+		
+		.det-hidden {
+			display: none;
+		}
+		
+		#text1 {
+			display: block;
+		}
+	</style>
+
+</head>
+
+<body class="page-loading">
+
+	<div class="pageload">
+		<div class="pageload-inner">
+			<div class="sk-cube-grid">
+				<div class="sk-cube sk-cube1"></div>
+				<div class="sk-cube sk-cube2"></div>
+				<div class="sk-cube sk-cube3"></div>
+				<div class="sk-cube sk-cube4"></div>
+				<div class="sk-cube sk-cube5"></div>
+				<div class="sk-cube sk-cube6"></div>
+				<div class="sk-cube sk-cube7"></div>
+				<div class="sk-cube sk-cube8"></div>
+				<div class="sk-cube sk-cube9"></div>
+			</div>
+		</div>
+	</div>
+
+	<div class="app layout-fixed-header">
+
+		<div class="sidebar-panel offscreen-left">
+			<div class="brand">
+
+				<!--<a href="javascript:;" class="toggle-apps hidden-xs" data-toggle="quick-launch">
+					<i class="icon-grid"></i>
+				</a>-->
+
+
+				<div class="toggle-offscreen">
+					<a href="javascript:;" class="visible-xs hamburger-icon" data-toggle="offscreen" data-move="ltr">
+						<span></span>
+						<span></span>
+						<span></span>
+					</a>
+				</div>
+
+
+				<a class="brand-logo" href="./dashboard">
+					<i class="icon-layers hidden-xs hidden-sm" style="padding-right:.9375rem;"></i><span>Open<strong>Projects</strong><sup class="hidden-xs hidden-sm" style="font-size:0.7em;">BETA</sup></span>
+				</a>
+				<a href="#" class="small-menu-visible brand-logo"><i class="icon-layers"></i></a>
+
+			</div>
+
+
+			<nav role="navigation">
+				<ul class="nav">
+
+					<li class="active">
+						<a href="./dashboard">
+							<i class="icon-compass"></i>
+							<span>Dashboard</span>
+						</a>
+					</li>
+
+
+					<li>
+						<a href="./newidea">
+							<i class="icon-bulb"></i>
+							<span>Propose a New Idea</span>
+						</a>
+					</li>
+
+					<li>
+						<a href="./editidea">
+							<i class="icon-pencil"></i>
+							<span>Edit My Ideas</span>
+						</a>
+					</li>
+
+					<li>
+						<a href="./ideapool">
+							<i class="icon-magnifier"></i>
+							<span>Idea Pool</span>
+						</a>
+					</li>
+
+					<li>
+						<a href="./profile">
+							<i class="icon-user"></i>
+							<span>Profile</span>
+						</a>
+					</li>
+
+				</ul>
+			</nav>
+
+
+		</div>
+
+
+		<div class="main-panel">
+
+			<div class="header navbar">
+				<div class="brand visible-xs">
+
+					<div class="toggle-offscreen">
+						<a href="javascript:;" class="hamburger-icon visible-xs" data-toggle="offscreen" data-move="ltr">
+							<span></span>
+							<span></span>
+							<span></span>
+						</a>
+					</div>
+
+
+					<a class="brand-logo" href="./dashboard">
+						<i class="icon-layers" style="padding-right:.9375rem;"></i><span>Open<strong>Projects</strong><sup> BETA</sup></span>
+					</a>
+
+				</div>
+				<ul class="nav navbar-nav hidden-xs">
+					<li>
+						<a href="javascript:;" class="small-sidebar-toggle ripple" data-toggle="layout-small-menu">
+							<i class="icon-toggle-sidebar"></i>
+						</a>
+					</li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right hidden-xs">
+
+
+					<li>
+						<a href="javascript:;" class="ripple" data-toggle="dropdown">
+							<i class="icon-bell"></i>
+						</a>
+						<ul class="dropdown-menu notifications">
+							<!--<li class="notifications-header">
+								<p class="text-muted small">You have 3 new messages</p>
+							</li>-->
+							<li>
+								<ul class="notifications-list">
+								<% for(var i=0;i<notifications.length;i++) { %>
+									<li>
+										<a href="<%=notifications[i].link%>">
+
+											<span class="notification-message"><%= notifications[i].message%></span>
+											<time class="timeago pull-right m-r text-muted" datetime="<%=notifications[i].timestamp%>"></time>
+										</a>
+									</li>
+								<% } %>
+								</ul>
+							</li>
+						</ul>
+					</li>
+
+					<!--User Profile Section-->
+					<li>
+						<a href="javascript:;" class="ripple" data-toggle="dropdown">
+							<img src="<%-profilepicurl%>" class="header-avatar img-circle" alt="user" title="user" style="margin-right: 5px;">
+							<span><%=name%></span>
+							<span class="caret"></span>
+						</a>
+						<ul class="dropdown-menu">
+							<li>
+								<a href="./profile">My Profile</a>
+							</li>
+							<!--
+							<li>
+								<a href="javascript:;">
+									<span class="label bg-danger pull-right">34</span>
+									<span>Notifications</span>
+								</a>
+							</li>-->
+							<li role="separator" class="divider"></li>
+							<!--<li>
+								<a href="javascript:;">Help</a>
+							</li>-->
+							<li>
+								<a href="./logout">Logout</a>
+							</li>
+						</ul>
+					</li>
+
+				</ul>
+			</div>
+
+
+			<div class="main-content no-padding">
+
+
+
+				<div class="fill-container">
+					<div class="relative full-height">
+						<div class="display-columns">
+							<div class="column contacts-sidebar hidden-xs bg-white b-r">
+								<div class="scroll">
+									<div class="p-a">
+										<nav role="navigation">
+											<!--<h5 class="text-center text-uppercase">Listing all <b><span>19</span></b> ideas</h5>-->
+											<ul class="nav nav-stacked nav-pills">
+												<li class="text-uppercase small">
+													<h6>Filter by Skills</h6>
+												</li>
+												<li>
+													<a href="javascript:;" onclick="enable_visibility('skill_all');">
+														<span>All Skills</span>
+													</a>
+												</li>
+												<li>
+													<a href="javascript:;" onclick="enable_visibility('skill_manager');">
+
+														<span>Manager/Business Analyst</span>
+													</a>
+												</li>
+												<li>
+													<a href="javascript:;" onclick="enable_visibility('skill_designer');">
+
+														<span>Designer (UI + Branding)</span>
+													</a>
+												</li>
+												<li>
+													<a href="javascript:;" onclick="enable_visibility('skill_backend');">
+
+														<span>Backend Developer</span>
+													</a>
+												</li>
+												<li>
+													<a href="javascript:;" onclick="enable_visibility('skill_windows');">
+
+														<span>Windows Developer</span>
+													</a>
+												</li>
+												<li>
+													<a href="javascript:;" onclick="enable_visibility('skill_android');">
+
+														<span>Android Developer</span>
+													</a>
+												</li>
+												<li>
+													<a href="javascript:;" onclick="enable_visibility('skill_ios');">
+
+														<span>iOS Developer</span>
+													</a>
+												</li>
+												<li>
+													<a href="javascript:;" onclick="enable_visibility('skill_ux');">
+
+														<span>UX/Workflow Designer</span>
+													</a>
+												</li>
+												<li>
+													<a href="javascript:;" onclick="enable_visibility('skill_frontend');">
+
+														<span>Frontend Developer</span>
+													</a>
+												</li>
+												<li>
+													<a href="javascript:;" onclick="enable_visibility('skill_sponsorship');">
+
+														<span>Sponsorship</span>
+													</a>
+												</li>
+											</ul>
+										</nav>
+									</div>
+								</div>
+							</div>
+
+
+
+							<div class="column contacts-list bg-white b-r">
+								<div id="skill_all" class="ioslist" style="display: block">
+									<div class="ioslist-group-container">
+										<div class="ioslist-group-header">Projects</div>
+										<ul>
+											<% for (var i=0;i<ideas.length;i++) { %>
+											<li style="white-space:normal;"><a href="javascript:show('idea_<%= ideas[i]._id%>');"><%=ideas[i].title%></a><span class="pull-right"><span data-toggle="tooltip" title="Interested" data-placement="left"><i class="fa fa-circle fa-fw text-success" style="margin-right:5px;"></i><%=ideas[i].interested.length%></span><span class="m-l" data-toggle="tooltip" title="Not Interested" data-placement="left"><i class="fa fa-circle fa-fw text-danger" style="margin-right:5px;"></i><%=ideas[i].notinterested.length%></span></li></span>
+											<% } %>
+										</ul>
+									</div>
+								</div>
+								
+								<div id="skill_manager" class="ioslist" style="display: none">
+									<div class="ioslist-group-container">
+										<div class="ioslist-group-header">Projects</div>
+										<ul>
+											<% for (var i=0;i<ideas.length;i++) { if (ideas[i].skills.indexOf( 'Manager/Business Analyst')> -1) {%>
+											<li style="white-space:normal;"><a href="javascript:show('idea_<%= ideas[i]._id%>');"><%=ideas[i].title%></a><span class="pull-right"><span data-toggle="tooltip" title="Interested" data-placement="left"><i class="fa fa-circle fa-fw text-success" style="margin-right:5px;"></i><%=ideas[i].interested.length%></span><span class="m-l" data-toggle="tooltip" title="Not Interested" data-placement="left"><i class="fa fa-circle fa-fw text-danger" style="margin-right:5px;"></i><%=ideas[i].notinterested.length%></span></li></span>
+											<% } } %>
+										</ul>
+									</div>
+								</div>
+
+								<div id="skill_designer" class="ioslist" style="display: none">
+									<div class="ioslist-group-container">
+										<div class="ioslist-group-header">Projects</div>
+										<ul>
+											<% for (var i=0;i<ideas.length;i++) { if (ideas[i].skills.indexOf( 'Designer (UI + Branding)')> -1) {%>
+											<li style="white-space:normal;"><a href="javascript:show('idea_<%= ideas[i]._id%>');"><%=ideas[i].title%></a><span class="pull-right"><span data-toggle="tooltip" title="Interested" data-placement="left"><i class="fa fa-circle fa-fw text-success" style="margin-right:5px;"></i><%=ideas[i].interested.length%></span><span class="m-l" data-toggle="tooltip" title="Not Interested" data-placement="left"><i class="fa fa-circle fa-fw text-danger" style="margin-right:5px;"></i><%=ideas[i].notinterested.length%></span></li></span>
+											<% } }%>
+										</ul>
+									</div>
+								</div>
+								<div id="skill_backend" class="ioslist" style="display: none">
+									<div class="ioslist-group-container">
+										<div class="ioslist-group-header">Projects</div>
+										<ul>
+											<% for (var i=0;i<ideas.length;i++) { if (ideas[i].skills.indexOf( 'Backend Developer')> -1) { %>
+											<li style="white-space:normal;"><a href="javascript:show('idea_<%= ideas[i]._id%>');"><%=ideas[i].title%></a><span class="pull-right"><span data-toggle="tooltip" title="Interested" data-placement="left"><i class="fa fa-circle fa-fw text-success" style="margin-right:5px;"></i><%=ideas[i].interested.length%></span><span class="m-l" data-toggle="tooltip" title="Not Interested" data-placement="left"><i class="fa fa-circle fa-fw text-danger" style="margin-right:5px;"></i><%=ideas[i].notinterested.length%></span></li></span>
+											<% } }%>
+										</ul>
+									</div>
+								</div>
+								<div id="skill_windows" class="ioslist" style="display: none">
+									<div class="ioslist-group-container">
+										<div class="ioslist-group-header">Projects</div>
+										<ul>
+											<% for (var i=0;i<ideas.length;i++) { if (ideas[i].skills.indexOf( 'Windows Developer')> -1) {%>
+											<li style="white-space:normal;"><a href="javascript:show('idea_<%= ideas[i]._id%>');"><%=ideas[i].title%></a><span class="pull-right"><span data-toggle="tooltip" title="Interested" data-placement="left"><i class="fa fa-circle fa-fw text-success" style="margin-right:5px;"></i><%=ideas[i].interested.length%></span><span class="m-l" data-toggle="tooltip" title="Not Interested" data-placement="left"><i class="fa fa-circle fa-fw text-danger" style="margin-right:5px;"></i><%=ideas[i].notinterested.length%></span></li></span>
+											<% } }%>
+										</ul>
+									</div>
+								</div>
+								<div id="skill_android" class="ioslist" style="display: none">
+									<div class="ioslist-group-container">
+										<div class="ioslist-group-header">Projects</div>
+										<ul>
+											<% for (var i=0;i<ideas.length;i++) { if (ideas[i].skills.indexOf( 'Android Developer')> -1) {%>
+											<li style="white-space:normal;"><a href="javascript:show('idea_<%= ideas[i]._id%>');"><%=ideas[i].title%></a><span class="pull-right"><span data-toggle="tooltip" title="Interested" data-placement="left"><i class="fa fa-circle fa-fw text-success" style="margin-right:5px;"></i><%=ideas[i].interested.length%></span><span class="m-l" data-toggle="tooltip" title="Not Interested" data-placement="left"><i class="fa fa-circle fa-fw text-danger" style="margin-right:5px;"></i><%=ideas[i].notinterested.length%></span></li></span>
+											<% } }%>
+										</ul>
+									</div>
+								</div>
+								<div id="skill_ios" class="ioslist" style="display: none">
+									<div class="ioslist-group-container">
+										<div class="ioslist-group-header">Projects</div>
+										<ul>
+											<% for (var i=0;i<ideas.length;i++) { if (ideas[i].skills.indexOf( 'iOS Developer')> -1) { %>
+											<li style="white-space:normal;"><a href="javascript:show('idea_<%= ideas[i]._id%>');"><%=ideas[i].title%></a><span class="pull-right"><span data-toggle="tooltip" title="Interested" data-placement="left"><i class="fa fa-circle fa-fw text-success" style="margin-right:5px;"></i><%=ideas[i].interested.length%></span><span class="m-l" data-toggle="tooltip" title="Not Interested" data-placement="left"><i class="fa fa-circle fa-fw text-danger" style="margin-right:5px;"></i><%=ideas[i].notinterested.length%></span></li></span>
+											<% } }%>
+										</ul>
+									</div>
+								</div>
+								<div id="skill_ux" class="ioslist" style="display: none">
+									<div class="ioslist-group-container">
+										<div class="ioslist-group-header">Projects</div>
+										<ul>
+											<% for (var i=0;i<ideas.length;i++) { if (ideas[i].skills.indexOf( 'UX/Workflow Designer')> -1) { %>
+											<li style="white-space:normal;"><a href="javascript:show('idea_<%= ideas[i]._id%>');"><%=ideas[i].title%></a><span class="pull-right"><span data-toggle="tooltip" title="Interested" data-placement="left"><i class="fa fa-circle fa-fw text-success" style="margin-right:5px;"></i><%=ideas[i].interested.length%></span><span class="m-l" data-toggle="tooltip" title="Not Interested" data-placement="left"><i class="fa fa-circle fa-fw text-danger" style="margin-right:5px;"></i><%=ideas[i].notinterested.length%></span></li></span>
+											<% } }%>
+										</ul>
+									</div>
+								</div>
+								<div id="skill_frontend" class="ioslist" style="display: none">
+									<div class="ioslist-group-container">
+										<div class="ioslist-group-header">Projects</div>
+										<ul>
+											<% for (var i=0;i<ideas.length;i++) { if (ideas[i].skills.indexOf( 'Frontend Developer')> -1) { %>
+											<li style="white-space:normal;"><a href="javascript:show('idea_<%= ideas[i]._id%>');"><%=ideas[i].title%></a><span class="pull-right"><span data-toggle="tooltip" title="Interested" data-placement="left"><i class="fa fa-circle fa-fw text-success" style="margin-right:5px;"></i><%=ideas[i].interested.length%></span><span class="m-l" data-toggle="tooltip" title="Not Interested" data-placement="left"><i class="fa fa-circle fa-fw text-danger" style="margin-right:5px;"></i><%=ideas[i].notinterested.length%></span></li></span>
+											<% } }%>
+										</ul>
+									</div>
+								</div>
+								<div id="skill_sponsorship" class="ioslist" style="display: none">
+									<div class="ioslist-group-container">
+										<div class="ioslist-group-header">Projects</div>
+										<ul>
+											<% for (var i=0;i<ideas.length;i++) { if (ideas[i].skills.indexOf( 'Sponsorship')> -1) { %>
+											<li style="white-space:normal;"><a href="javascript:show('idea_<%= ideas[i]._id%>');"><%=ideas[i].title%></a><span class="pull-right"><span data-toggle="tooltip" title="Interested" data-placement="left"><i class="fa fa-circle fa-fw text-success" style="margin-right:5px;"></i><%=ideas[i].interested.length%></span><span class="m-l" data-toggle="tooltip" title="Not Interested" data-placement="left"><i class="fa fa-circle fa-fw text-danger" style="margin-right:5px;"></i><%=ideas[i].notinterested.length%></span></li></span>
+											<% } }%>
+										</ul>
+									</div>
+								</div>
+								
+								
+							</div>
+
+							
+							<!--Right Pane-->
+							<div class="column contact-view">
+
+
+								<% for(var i=0;i<ideas.length;i++) { %>
+								<div class="scroll full-height det-hidden" id="idea_<%=ideas[i]._id%>" <% if (ideas[i]._id==load_id){ %> style="display: block"  <% } %> >
+									<div class="full-height">
+										<div class="contact-header m-b">
+											<div class="contact-toolbar visible-xs m-b">
+												<a href="#">
+													<span class="icon-arrow-up visible-xs m-r m-l"><span class="m-l" style="font-family:Montserrat; text-transform:uppercase;">Go Up to Idea List</span></span>
+												</a>
+											</div>
+											<div class="p-a">
+
+												<div class="overflow-hidden">
+													<h1 class="hvr-float-shadow"><b><%= ideas[i].title %></b></h1>
+													<h4><%= ideas[i].sdesc %></h4>
+												</div>
+											</div>
+										</div>
+
+										<div class="row m-b">
+											<div class="col-xs-4 text-right">
+												<span class="text-muted">Proposed By</span>
+											</div>
+											<div class="col-xs-8">
+												<span><%= ideas[i].owner %></span>
+											</div>
+										</div>
+
+										<div class="row m-b">
+											<div class="col-xs-4 text-right">
+												<span class="text-muted">Long Description</span>
+											</div>
+											<div class="col-xs-7">
+												<span><%- ideas[i].ldesc %></span>
+											</div>
+										</div>
+
+										<div class="row m-b">
+											<div class="col-xs-4 text-right">
+												<span class="text-muted">Timespan</span>
+											</div>
+											<div class="col-xs-7">
+												<span class="text"><%= ideas[i].timespan %></span>
+											</div>
+										</div>
+
+										<div class="row m-b">
+											<div class="col-xs-4 text-right">
+												<span class="text-muted">Facets</span>
+											</div>
+											<div class="col-xs-7">
+												<span><%= ideas[i].skills.join(', ') %></span>
+											</div>
+										</div>
+
+										<div class="row m-b">
+											<div class="col-xs-4 text-right">
+												<span class="text-muted">Platforms Targetted</span>
+											</div>
+											<div class="col-xs-7">
+												<span><% if (ideas[i].platform.windows){ %> Windows,  <% } %><% if (ideas[i].platform.web){ %> Web, <% } %><% if (ideas[i].platform.android){ %> Android, <% } %><% if (ideas[i].platform.ios){ %> iOS <% } %></span>
+											</div>
+										</div>
+
+										<div class="row m-b">
+											<div class="col-xs-4 text-right">
+												<span class="text-muted">Target Audience</span>
+											</div>
+											<div class="col-xs-7">
+												<span><%= ideas[i].targetaudience %></span>
+											</div>
+										</div>
+
+										<div class="row m-b">
+											<div class="col-xs-4 text-right">
+												<span class="text-muted">Funding Needed (if any)</span>
+											</div>
+											<div class="col-xs-7">
+												<span><%= ideas[i].funding %></span>
+											</div>
+										</div>
+
+										<div class="row m-b">
+											<div class="col-xs-4 text-right">
+												<span class="text-muted">External/Internal Resources</span>
+											</div>
+											<div class="col-xs-7">
+												<span><%= ideas[i].extresources %></span>
+											</div>
+										</div>
+
+										<div class="row m-b">
+											<div class="col-xs-4 text-right">
+												<span class="text-muted">Past Experience</span>
+											</div>
+											<div class="col-xs-7">
+												<span><%= ideas[i].pastexp %></span>
+											</div>
+										</div>
+
+										<div class="row m-b">
+											<div class="col-xs-4 text-right">
+												<span class="text-muted">Competition</span>
+
+
+											</div>
+											<div class="col-xs-7">
+												<span><%= ideas[i].competition %></span>
+
+												<hr>
+											</div>
+										</div>
+
+										<%  if (ideas[i].owner==username){ %>
+										<div class="row m-b">
+											<div class="m-l-md">
+												
+												<h4>You are the owner of this idea, good luck!</h4>
+											</div>
+										</div>										
+										
+										<% } else if(ideas[i].notinterested.concat(ideas[i].interested).indexOf(username)==-1) { %>
+										<div class="row m-b">
+											<div class="col-xs-4 text-right">
+
+												<h4>Your Preference*</h4>
+
+											</div>
+											
+											<form method="POST" action="./review">
+											<div class="col-xs-7">
+												<input type="hidden" name="idea_id" value="<%= ideas[i]._id%>">
+												<div>
+													<input class="to-labelauty" type="radio" name="interested" data-labelauty="Extremely Interested - I will see this through to completion." value="1">
+													
+												</div>
+												<div>
+													<input class="to-labelauty" type="radio" name="interested" data-labelauty="I like the idea - won't be willing to implement though." value="1">
+												</div>
+												<div>
+													<input class="to-labelauty" type="radio" name="interested" data-labelauty="I don't like the idea - but I will be interested in the tech involved." value="3">
+												</div>
+												<div>
+													<input class="to-labelauty" type="radio" name="interested" data-labelauty="Not Interested - This isn't my cup of tea." value="4">
+												</div>
+												<div>
+													<textarea class="form-control" name="review" rows="4" placeholder="Enter suggestions to make this idea better or give feedback in terms of competitors/similar ideas already out there." style="resize:none;" required></textarea>
+												</div>
+											</div>
+
+											<div class="row m-b">
+												<div class="col-xs-4 text-right m-t-md">
+	
+													<h6>Press Submit* to Send your preference to Team Admin</h6>
+	
+												</div>
+	
+												<div class="col-xs-7 m-t-md">
+													<button type="Submit" class="btn btn-primary">Submit for Approval</button>
+												</div>
+												
+												</form>
+												
+												
+												<div class="col-xs-10 m-t-md m-l-lg">
+													<p>*Submission OR Choosing A Preference is not mandatory, however it is <b>recommended</b>. Its to give you a better sense of how you feel about a project and if you're likely to pursue it dilligently. It also gives the Team Admin more flexibility in assigning people for a particular project while keeping your preference in mind.</p>
+	
+												</div>
+												
+											</div>
+											
+										</div>	
+										
+										<% } else { %>
+										<div class="row m-b">
+											<div class="m-l-md">
+
+												<h4>Your Preference has already been recorded and you will <% if(ideas[i].notinterested.indexOf(username)>-1) { %> NOT <% } %> be considered for this idea</h4>
+											</div>
+										</div>										
+										<% } %>
+									</div>
+								</div>
+
+							<% } %>
+
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+
+			</div>
+		</div>
+
+
+
+		<footer class="content-footer hidden-xs" style="bottom:0px; position:fixed;">
+			<nav class="footer-right">
+				<ul class="nav">
+					<li>
+						<a class="hvr-underline-reveal" href="javascript:;" data-toggle="modal" data-target="#feedback">Feedback</a>
+					</li>
+
+				</ul>
+			</nav>
+			<nav class="footer-left">
+				<ul class="nav">
+					<li>
+						<a href="documentation/index.html" target="_blank">Official Documentation</a>
+					</li>
+					<li>
+						<a class="scroll-up" href="javascript:;"><i class="fa fa-angle-up"></i></a>
+					</li>
+				</ul>
+			</nav>
+		</footer>
+
+		<div id="feedback" class="modal fade bs-modal-sm" tabindex="-1" role="dialog" aria-hidden="true">
+			<div class="modal-dialog">
+
+				<!-- Modal content-->
+				<div class="modal-content">
+				<form class="form-horizontal text-center align-middle" role="form" method="POST" action="./feedback">
+					<div class="modal-header text-center">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Tell us what you think of
+							<span style="font-family: Montserrat">Open<b>Projects</b><sup>BETA</sup></span></h4>
+					</div>
+					<div class="modal-body text-center align-middle">
+						<p>
+							<b>"</b>Software undergoes beta testing shortly before it’s released. Beta is Latin for <i>still doesn’t work</i>.<b>"</b>
+							<br>
+							<!--<br><b>You'll be the first to know!</b></p>-->
+								<!--<input type="text" class="form-control m-t" placeholder="Name" style="margin:0 auto; width:300px;">
+<input type="email" class="form-control m-t" placeholder="Email ID" style="margin:0 auto; width:300px;">-->
+								<textarea name="feedback" class="form-control m-t" rows="4" placeholder="Curse us or applaud us if you'd like! Suggestions are always welcome." style="resize:none; margin:0 auto; width:500px;"></textarea>
+					</div>
+					<div class="modal-footer no-border align-middle text-center">
+						<!--<button type="button" class="btn btn-default hvr-icon-back" data-dismiss="modal"><span style="margin-left:5px;">Back</span></button>-->
+						<button type="Submit" class="btn btn-primary hvr-icon-wobble-horizontal"><span style="margin-right:5px;">Submit</span></button>
+					</div>
+				</form>
+				</div>
+
+			</div>
+		</div>
+
+
+
+
+	</div>
+	<script src="scripts/app.min.js"></script>
+
+	<script src="vendor/chosen_v1.4.0/chosen.jquery.min.js"></script>
+	<script src="vendor/jquery.tagsinput/src/jquery.tagsinput.js"></script>
+	<script src="vendor/checkbo/src/0.1.4/js/checkBo.min.js"></script>
+	<script src="vendor/intl-tel-input/build/js/intlTelInput.min.js"></script>
+	<script src="vendor/moment/min/moment.min.js"></script>
+	<script src="vendor/bootstrap-daterangepicker/daterangepicker.js"></script>
+	<script src="vendor/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+	<script src="vendor/bootstrap-timepicker/js/bootstrap-timepicker.min.js"></script>
+	<script src="vendor/clockpicker/dist/jquery-clockpicker.min.js"></script>
+	<script src="vendor/mjolnic-bootstrap-colorpicker/dist/js/bootstrap-colorpicker.min.js"></script>
+	<script src="vendor/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.js"></script>
+	<script src="vendor/select2/dist/js/select2.js"></script>
+	<script src="vendor/selectize/dist/js/standalone/selectize.min.js"></script>
+	<script src="vendor/jquery-labelauty/source/jquery-labelauty.js"></script>
+	<script src="vendor/bootstrap-maxlength/bootstrap-maxlength.min.js"></script>
+	<script src="vendor/typeahead.js/dist/typeahead.bundle.js"></script>
+	<script src="vendor/multiselect/js/jquery.multi-select.js"></script>
+	<script src="vendor/jquery-labelauty/source/jquery-labelauty.js"></script>
+	<script src="scripts/forms/plugins.js"></script>
+
+	<script type="text/javascript">
+		$("[data-toggle=tooltip]").tooltip();
+		$("[data-toggle=popover]")
+			.popover()
+			.click(function (e) {
+				e.preventDefault();
+			});
+	</script>
+	
+	<script type="text/javascript">
+		function show(id) {
+			var item = document.getElementById(id);
+			var all = document.getElementsByClassName('det-hidden');
+			for (var i = 0; i < all.length; i++) all[i].style.display = 'none';
+			if (item) item.style.display = 'block';
+		}
+	</script>
+
+	<script src="vendor/ioslist/dist/js/jquery.ioslist.js"></script>
+
+
+	<script type="text/javascript">
+		$('.ioslist').ioslist();
+	</script>
+	
+	<script type="text/javascript">
+		function enable_visibility(id) {
+			var e = document.getElementById(id);
+			var all = document.getElementsByClassName('ioslist');
+			for (var i = 0; i < all.length; i++) all[i].style.display = 'none';
+			if (e) e.style.display = 'block';
+		}
+	</script>
+
+</body>
+
+</html>

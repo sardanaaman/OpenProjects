@@ -1,0 +1,16 @@
+<html>
+    <head>Yolo</head>
+    <body>
+        <form action="/admin/ideacontrol" method="POST">
+            Idea_id<input type="text" name="idea_id"><br>
+            Participant
+            Status<input type="text" name="setstatus">
+            <input type="Submit" name="Submit">
+            <br><br>
+            Proposed ideas: <br>
+            <% for (var i=0; i<ideas.length;i++){ %>
+                <a href="<%=siteurl%>adminideaview?idea_id=<%=ideas[i]._id%>"><%= ideas[i].title %></a><br>
+            <% } %>
+        </form>
+    </body>
+</html>

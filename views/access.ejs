@@ -1,0 +1,139 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+	<meta charset="utf-8">
+	<title>Login | OpenProjects (Beta)</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
+
+	<link rel="stylesheet" href="styles/app.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.0.2/css/hover-min.css">
+
+
+</head>
+
+<body class="page-loading" style="border-top:7px solid #6164c1; overflow:auto;">
+	<style>
+		.hvr-underline-reveal::before {
+			background: #6164c1;
+		}
+	</style>
+
+	<div class="pageload">
+		<div class="pageload-inner">
+			<div class="pageload-inner">
+				<div class="sk-cube-grid center-block m-y-lg">
+					<div class="sk-cube sk-cube1"></div>
+					<div class="sk-cube sk-cube2"></div>
+					<div class="sk-cube sk-cube3"></div>
+					<div class="sk-cube sk-cube4"></div>
+					<div class="sk-cube sk-cube5"></div>
+					<div class="sk-cube sk-cube6"></div>
+					<div class="sk-cube sk-cube7"></div>
+					<div class="sk-cube sk-cube8"></div>
+					<div class="sk-cube sk-cube9"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="app lockscreen usersession bg-white">
+		<div class="session-wrapper">
+			<div class="page-height-o row-equal align-middle">
+				<div class="column">
+					<img class="img-responsive m-t hvr-float-shadow" src="images/Logo.gif" style="display:block; margin: 0 auto; width:auto; height:auto; padding:7px;">
+					<h5 class="text-center">A minimal-and-robust Project Management Tool (for teams) that works on <i>preferences</i>.</h5>
+					<div class="card no-border bg-white text-center">
+						<div class="card-block">
+							<div class="text-center">
+								<p class="p-t-md" style="font-family:Montserrat;text-transform:uppercase;"><%= message %></p>
+								<div class="lockscreen-avatar">
+									<img src="images/man.png" alt="" class="avatar avatar-lg img-circle hvr-buzz">
+								</div>
+								<span class="center-block m-t">Hello There!</span>
+								<small>Please enter the access code below.</small>
+							</div>
+							<div class="center-block lockcode">
+								<form role="form" action="./access" method="POST">
+									<div class="input-group m-y">
+										<input type="password" class="form-control lock-input" name="accesscode" id="password" placeholder="Access Code" required="">
+										<span class="input-group-btn">
+<button class="btn btn-success" type="submit">
+<i class="icon-share-alt"></i>
+Login
+</button>
+</span>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<footer class="session-footer hidden-xs" style="bottom:0px; position:fixed;">
+			<nav class="footer-right">
+				<ul class="nav">
+					<li>
+						<a href="http://csivit.com" class="hvr-underline-reveal" target="_blank">CSI - VITU</a>
+					</li>
+					<!--<li>
+						<a href="javascript:;" class="scroll-up">
+							<i class="fa fa-angle-up"></i>
+						</a>
+					</li>-->
+				</ul>
+			</nav>
+			<nav class="footer-left">
+				<ul class="nav">
+					<li>
+						<a href="" class="hvr-underline-reveal" data-toggle="modal" data-target=".bs-modal-sm"><span>Sign Up for Public Beta</a>
+					</li>
+					<li>
+						<a href="javascript:;" class="hvr-underline-reveal" data-toggle="popover" data-placement="top" title="" data-content="Aman Sardana, Subash SN">Developers</a>
+					</li>
+				</ul>
+			</nav>
+		</footer>
+
+	</div>
+
+	<div class="modal fade bs-modal-sm" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<!--<div class="modal-header">
+	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+	<h4 class="modal-title">Contact</h4>
+</div>-->
+				<form class="form-horizontal text-center align-middle" role="form" action="./requestbeta" method="post">
+				<div class="modal-body text-center align-middle">
+					<p>We are in the process of experimenting with
+						<span style="font-family: Montserrat">OpenProjects</span> with a very exclusive group of Beta Testers. Fill this in and we'll get back to you once we launch.
+						<br>
+						<br><b>You'll be the first to know!</b></p>
+						<input required type="text" class="form-control m-t" name="name" placeholder="Name" style="margin:0 auto; width:300px;">
+						<input required type="email" class="form-control m-t" name="email" placeholder="Email ID" style="margin:0 auto; width:300px;">
+						<textarea required class="form-control m-t" rows="3" name="message" placeholder="How do you plan on using OpenProjects?" style="resize:none; margin:0 auto; width:300px;"></textarea>
+				</div>
+				<div class="modal-footer no-border align-middle text-center">
+					<button type="button" class="btn btn-default hvr-icon-back" data-dismiss="modal"><span style="margin-left:5px;">Back</span></button>
+					<button type="submit" class="btn btn-primary hvr-icon-forward"><span style="margin-right:5px;">Send</span></button>
+				</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<script src="scripts/app.min.js"></script>
+	<script type="text/javascript">
+		$("[data-toggle=popover]")
+			.popover()
+			.click(function (e) {
+				e.preventDefault();
+			});
+	</script>
+</body>
+
+</html>

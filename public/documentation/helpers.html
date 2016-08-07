@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html class="no-js">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="flat, clean, responsive, application frontend template built with bootstrap 3">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Helpers | OpenProjects (Beta)</title>
+
+	<link rel="stylesheet" href="styles/docs.css">
+
+
+	<body>
+		<div class="pageload">
+			<div class="spinner"></div>
+		</div>
+		<header class="header fixed-sticky">
+			<div class="container">
+				<nav class="heading-font">
+					<div class="branding">
+						<button type="button" class="mobile-toggle"> <span class="icon-grid"></span> </button> <a href="index.html" class="logo transition"><i class="icon-layers" style="padding-right:.9375rem;"></i><span>Open<strong>Projects</strong><sup style="font-size:0.6em;">BETA</sup></span></a> </div>
+					<div class="navigation">
+						<ul class="nav hidden-md hidden-lg">
+							<li class="hide">
+								<a href="#top" style="border-bottom:none;"></a>
+							</li>
+							<li>
+								<a href="index.html" style="border-bottom:none;">Getting Started</a></li>
+							<li>
+								<a href="layout-options.html" style="border-bottom:none;">Layout options</a></li>
+							<li>
+								<a href="colors.html" style="border-bottom:none;">Colors</a></li>
+							<li>
+								<a href="helpers.html" style="border-bottom:none;">Helpers</a></li>
+						</ul>
+					</div>
+				</nav>
+			</div>
+		</header>
+		<section class="content-section">
+			<div class="container">
+				<div class="columns">
+					<div class="column w300  hidden-sm hidden-xs">
+						<h6 class="text-muted text-uppercase">Table of contents</h6>
+						<ul class="list-unstyled toc">
+							<li>
+								<a href="index.html"> <span>Getting Started</span> </a>
+							</li>
+							<li>
+								<a href="layout-options.html"> <span>Layout options</span> </a>
+							</li>
+							<li>
+								<a href="colors.html"> <span>Colors</span> </a>
+							</li>
+							<li>
+								<a href="helpers.html"> <span>Helpers</span> </a>
+							</li>
+
+							<li>
+								<a href="3rd.html"> <span>Credits / 3rd party plugins</span> </a>
+							</li>
+						</ul>
+						<hr>
+						<!--<ul class="list-unstyled toc">
+	<li>
+		<a href="changelog.html"> <span>Changelog</span> </a>
+	</li>
+</ul>-->
+					</div>
+					<div class="column bl">
+						<h3 class="page-title">Helper Classes</h3>
+						<p>To save time and effort.</p>
+						<h5 class="mt25">Borders</h5>
+						<ul>
+							<li><code>.no-border</code><code>.b-a-0</code><span> remove all borders</span> </li>
+							<li><code>.b-a</code><span> border on all 4 sides</span> </li>
+							<li><code>.b-l</code><span> left border</span> </li>
+							<li><code>.b-r</code><span> right border</span> </li>
+							<li><code>.b-t</code><span> top border</span> </li>
+							<li><code>.b-b</code><span> bottom border</span> </li>
+							<li><code>.b-t-0</code><span> border-top: 0</span> </li>
+							<li><code>.b-r-0</code><span> border-right: 0</span> </li>
+							<li><code>.border-primary</code><span> border color primary</span> </li>
+							<li><code>.border-default</code><span> border color default</span> </li>
+							<li><code>.border-warning</code><span> border color warning</span> </li>
+							<li><code>.border-success</code><span> border color success</span> </li>
+							<li><code>.border-info</code><span> border color info</span> </li>
+							<li><code>.border-white</code><span> border color white</span> </li>
+							<li><code>.border-danger</code><span> border color danger</span> </li>
+						</ul>
+						<h5 class="mt25">Border radius based on <code>@border-radius-base</code></h5>
+						<ul>
+							<li><code>.no-radius</code><span> remove border radius</span> </li>
+							<li><code>.round</code><span> 4 corner border-radius</span> </li>
+							<li><code>.brtl</code><span> top left border radius</span> </li>
+							<li><code>.brtr</code><span> top right border radius</span> </li>
+							<li><code>.blbl</code><span> bottom left border radius</span> </li>
+							<li><code>.brbr</code><span> bottom right border radius</span> </li>
+						</ul>
+						<h5 class="mt25">Overflow</h5>
+						<ul>
+							<li><code>.overflow-hidden</code><span> overflow hidden</span> </li>
+							<li><code>.overflow-visible</code><span> overflow visible</span> </li>
+							<li><code>.overflow-auto</code><span> overflow auto</span> </li>
+						</ul>
+						<h5 class="mt25">Fixed widths</h5>
+						<ul>
+							<li><code>.w100</code><span> width 100px</span> </li>
+							<li><code>.w150</code><span> width 150px</span> </li>
+							<li><code>.w200</code><span> width 200px</span> </li>
+							<li><code>.w250</code><span> width 250px</span> </li>
+							<li><code>.w300</code><span> width 300px</span> </li>
+							<li><code>.w350</code><span> width 350px</span> </li>
+							<li><code>.w400</code><span> width 400px</span> </li>
+							<li><code>.w450</code><span> width 450px</span> </li>
+							<li><code>.w500</code><span> width 500px</span> </li>
+						</ul>
+						<h5 class="mt25">Positioning</h5>
+						<ul>
+							<li><code>.relative</code><span> position: relative</span> </li>
+							<li><code>.absolute</code><span> position: absolute</span> </li>
+							<li><code>.lt</code><span> left: 0</span> </li>
+							<li><code>.rt</code><span> right: 0</span> </li>
+							<li><code>.bt</code><span> bottom: 0</span> </li>
+							<li><code>.tp</code><span> top: 0</span> </li>
+						</ul>
+						<h5 class="mt25">Text alignment</h5>
+						<ul>
+							<li><code>.text-left</code><span> Left aligned text.</span> </li>
+							<li><code>.text-center</code><span> Center aligned text.</span> </li>
+							<li><code>.text-right</code><span> Right aligned text.</span> </li>
+							<li><code>.text-justify</code><span> Justified text.</span> </li>
+							<li><code>.text-nowrap</code><span> no wrap text.</span> </li>
+						</ul>
+						<h5 class="mt25">Other</h5>
+						<ul>
+							<li><code>.no-padding</code><span> remove padding</span> </li>
+							<li><code>.no-margin</code><span> remove margin</span> </li>
+							<li><code>.no-bg</code><span> transparent background</span> </li>
+							<li><code>.no-shadow</code><span> remove box shadows</span> </li>
+							<li><code>.shadow</code><span> add a subtle box shadow</span> </li>
+							<li><code>.text-shadow</code><span> add a subtle text shadow</span> </li>
+							<li><code>.block</code><span> display block</span> </li>
+						</ul>
+						<h5 class="mt25">Margins and paddings</h5>
+						<div class="row">
+							<div class="col-sm-12">
+								<table class="table table-bordered bl br">
+									<thead>
+										<tr>
+											<th>Class
+												<th>Description
+													<tbody>
+														<tr>
+															<td><b>.m-x-n</b>
+																<td>-15px margin left and right
+																	<tr>
+																		<td><b>.m-r-n</b>
+																			<td>-15px margin right
+																				<tr>
+																					<td><b>.m-l-n</b>
+																						<td>-15px margin left
+																							<tr>
+																								<td><b>.m-a-lg</b>
+																									<td>30px margin
+																										<tr>
+																											<td><b>.m-r-lg</b>
+																												<td>30px right margin
+																													<tr>
+																														<td><b>.m-b-lg</b>
+																															<td>30px bottom margin
+																																<tr>
+																																	<td><b>.m-l-lg</b>
+																																		<td>30px left margin
+																																			<tr>
+																																				<td><b>.m-t-lg</b>
+																																					<td>30px top margin
+																																						<tr>
+																																							<td><b>.m-x-lg</b>
+																																								<td>30px left and right margin
+																																									<tr>
+																																										<td><b>.m-y-lg</b>
+																																											<td>30px top and bottom margin
+																																												<tr>
+																																													<td><b>.m-a-md</b>
+																																														<td>20px margin
+																																															<tr>
+																																																<td><b>.m-r-md</b>
+																																																	<td>20px right margin
+																																																		<tr>
+																																																			<td><b>.m-b-md</b>
+																																																				<td>20px bottom margin
+																																																					<tr>
+																																																						<td><b>.m-l-md</b>
+																																																							<td>20px left margin
+																																																								<tr>
+																																																									<td><b>.m-t-md</b>
+																																																										<td>20px top margin
+																																																											<tr>
+																																																												<td><b>.m-x-md</b>
+																																																													<td>20px left and right margin
+																																																														<tr>
+																																																															<td><b>.m-y-md</b>
+																																																																<td>20px top and bottom margin
+																																																																	<tr>
+																																																																		<td><b>.m-a</b>
+																																																																			<td>15px margin
+																																																																				<tr>
+																																																																					<td><b>.m-r</b>
+																																																																						<td>15px right margin
+																																																																							<tr>
+																																																																								<td><b>.m-b</b>
+																																																																									<td>15px bottom margin
+																																																																										<tr>
+																																																																											<td><b>.m-l</b>
+																																																																												<td>15px left margin
+																																																																													<tr>
+																																																																														<td><b>.m-t</b>
+																																																																															<td>15px top margin
+																																																																																<tr>
+																																																																																	<td><b>.m-x</b>
+																																																																																		<td>15px left and right margin
+																																																																																			<tr>
+																																																																																				<td><b>.m-y</b>
+																																																																																					<td>15px top and bottom margin
+																																																																																						<tr>
+																																																																																							<td><b>.m-x-auto</b>
+																																																																																								<td>auto left and right margin
+																																																																																									<tr>
+																																																																																										<td><b>.m-a-0</b>
+																																																																																											<td>0px margin
+																																																																																												<tr>
+																																																																																													<td><b>.m-r-0</b>
+																																																																																														<td>0px right margin
+																																																																																															<tr>
+																																																																																																<td><b>.m-b-0</b>
+																																																																																																	<td>0px bottom margin
+																																																																																																		<tr>
+																																																																																																			<td><b>.m-l-0</b>
+																																																																																																				<td>0px left margin
+																																																																																																					<tr>
+																																																																																																						<td><b>.m-t-0</b>
+																																																																																																							<td>0px top margin
+																																																																																																								<tr>
+																																																																																																									<td><b>.m-x-0</b>
+																																																																																																										<td>0px left and right margin
+																																																																																																											<tr>
+																																																																																																												<td><b>.m-y-0</b>
+																																																																																																													<td>0px top and bottom margin </td>
+																																																																																																												</td>
+																																																																																																											</tr>
+																																																																																																										</td>
+																																																																																																									</td>
+																																																																																																								</tr>
+																																																																																																							</td>
+																																																																																																						</td>
+																																																																																																					</tr>
+																																																																																																				</td>
+																																																																																																			</td>
+																																																																																																		</tr>
+																																																																																																	</td>
+																																																																																																</td>
+																																																																																															</tr>
+																																																																																														</td>
+																																																																																													</td>
+																																																																																												</tr>
+																																																																																											</td>
+																																																																																										</td>
+																																																																																									</tr>
+																																																																																								</td>
+																																																																																							</td>
+																																																																																						</tr>
+																																																																																					</td>
+																																																																																				</td>
+																																																																																			</tr>
+																																																																																		</td>
+																																																																																	</td>
+																																																																																</tr>
+																																																																															</td>
+																																																																														</td>
+																																																																													</tr>
+																																																																												</td>
+																																																																											</td>
+																																																																										</tr>
+																																																																									</td>
+																																																																								</td>
+																																																																							</tr>
+																																																																						</td>
+																																																																					</td>
+																																																																				</tr>
+																																																																			</td>
+																																																																		</td>
+																																																																	</tr>
+																																																																</td>
+																																																															</td>
+																																																														</tr>
+																																																													</td>
+																																																												</td>
+																																																											</tr>
+																																																										</td>
+																																																									</td>
+																																																								</tr>
+																																																							</td>
+																																																						</td>
+																																																					</tr>
+																																																				</td>
+																																																			</td>
+																																																		</tr>
+																																																	</td>
+																																																</td>
+																																															</tr>
+																																														</td>
+																																													</td>
+																																												</tr>
+																																											</td>
+																																										</td>
+																																									</tr>
+																																								</td>
+																																							</td>
+																																						</tr>
+																																					</td>
+																																				</td>
+																																			</tr>
+																																		</td>
+																																	</td>
+																																</tr>
+																															</td>
+																														</td>
+																													</tr>
+																												</td>
+																											</td>
+																										</tr>
+																									</td>
+																								</td>
+																							</tr>
+																						</td>
+																					</td>
+																				</tr>
+																			</td>
+																		</td>
+																	</tr>
+																</td>
+															</td>
+														</tr>
+													</tbody>
+												</th>
+											</th>
+										</tr>
+									</thead>
+								</table>
+							</div>
+							<div class="col-sm-12">
+								<table class="table table-bordered bl br">
+									<thead>
+										<tr>
+											<th>Class
+												<th>Description
+													<tbody>
+														<tr>
+															<td><b>.p-x-n</b>
+																<td>-15px padding left and right
+																	<tr>
+																		<td><b>.p-r-n</b>
+																			<td>-15px padding right
+																				<tr>
+																					<td><b>.p-l-n</b>
+																						<td>-15px padding left
+																							<tr>
+																								<td><b>.p-a-lg</b>
+																									<td>30px padding
+																										<tr>
+																											<td><b>.p-r-lg</b>
+																												<td>30px right padding
+																													<tr>
+																														<td><b>.p-b-lg</b>
+																															<td>30px bottom padding
+																																<tr>
+																																	<td><b>.p-l-lg</b>
+																																		<td>30px left padding
+																																			<tr>
+																																				<td><b>.p-t-lg</b>
+																																					<td>30px top padding
+																																						<tr>
+																																							<td><b>.p-x-lg</b>
+																																								<td>30px left and right padding
+																																									<tr>
+																																										<td><b>.p-y-lg</b>
+																																											<td>30px top and bottom padding
+																																												<tr>
+																																													<td><b>.p-a-md</b>
+																																														<td>20px padding
+																																															<tr>
+																																																<td><b>.p-r-md</b>
+																																																	<td>20px right padding
+																																																		<tr>
+																																																			<td><b>.p-b-md</b>
+																																																				<td>20px bottom padding
+																																																					<tr>
+																																																						<td><b>.p-l-md</b>
+																																																							<td>20px left padding
+																																																								<tr>
+																																																									<td><b>.p-t-md</b>
+																																																										<td>20px top padding
+																																																											<tr>
+																																																												<td><b>.p-x-md</b>
+																																																													<td>20px left and right padding
+																																																														<tr>
+																																																															<td><b>.p-y-md</b>
+																																																																<td>20px top and bottom padding
+																																																																	<tr>
+																																																																		<td><b>.p-a</b>
+																																																																			<td>15px padding
+																																																																				<tr>
+																																																																					<td><b>.p-r</b>
+																																																																						<td>15px right padding
+																																																																							<tr>
+																																																																								<td><b>.p-b</b>
+																																																																									<td>15px bottom padding
+																																																																										<tr>
+																																																																											<td><b>.p-l</b>
+																																																																												<td>15px left padding
+																																																																													<tr>
+																																																																														<td><b>.p-t</b>
+																																																																															<td>15px top padding
+																																																																																<tr>
+																																																																																	<td><b>.p-x</b>
+																																																																																		<td>15px left and right padding
+																																																																																			<tr>
+																																																																																				<td><b>.p-y</b>
+																																																																																					<td>15px top and bottom padding
+																																																																																						<tr>
+																																																																																							<td><b>.p-x-auto</b>
+																																																																																								<td>auto left and right padding
+																																																																																									<tr>
+																																																																																										<td><b>.p-a-0</b>
+																																																																																											<td>0px padding
+																																																																																												<tr>
+																																																																																													<td><b>.p-r-0</b>
+																																																																																														<td>0px right padding
+																																																																																															<tr>
+																																																																																																<td><b>.p-b-0</b>
+																																																																																																	<td>0px bottom padding
+																																																																																																		<tr>
+																																																																																																			<td><b>.p-l-0</b>
+																																																																																																				<td>0px left padding
+																																																																																																					<tr>
+																																																																																																						<td><b>.p-t-0</b>
+																																																																																																							<td>0px top padding
+																																																																																																								<tr>
+																																																																																																									<td><b>.p-x-0</b>
+																																																																																																										<td>0px left and right padding
+																																																																																																											<tr>
+																																																																																																												<td><b>.p-y-0</b>
+																																																																																																													<td>0px top and bottom padding </td>
+																																																																																																												</td>
+																																																																																																											</tr>
+																																																																																																										</td>
+																																																																																																									</td>
+																																																																																																								</tr>
+																																																																																																							</td>
+																																																																																																						</td>
+																																																																																																					</tr>
+																																																																																																				</td>
+																																																																																																			</td>
+																																																																																																		</tr>
+																																																																																																	</td>
+																																																																																																</td>
+																																																																																															</tr>
+																																																																																														</td>
+																																																																																													</td>
+																																																																																												</tr>
+																																																																																											</td>
+																																																																																										</td>
+																																																																																									</tr>
+																																																																																								</td>
+																																																																																							</td>
+																																																																																						</tr>
+																																																																																					</td>
+																																																																																				</td>
+																																																																																			</tr>
+																																																																																		</td>
+																																																																																	</td>
+																																																																																</tr>
+																																																																															</td>
+																																																																														</td>
+																																																																													</tr>
+																																																																												</td>
+																																																																											</td>
+																																																																										</tr>
+																																																																									</td>
+																																																																								</td>
+																																																																							</tr>
+																																																																						</td>
+																																																																					</td>
+																																																																				</tr>
+																																																																			</td>
+																																																																		</td>
+																																																																	</tr>
+																																																																</td>
+																																																															</td>
+																																																														</tr>
+																																																													</td>
+																																																												</td>
+																																																											</tr>
+																																																										</td>
+																																																									</td>
+																																																								</tr>
+																																																							</td>
+																																																						</td>
+																																																					</tr>
+																																																				</td>
+																																																			</td>
+																																																		</tr>
+																																																	</td>
+																																																</td>
+																																															</tr>
+																																														</td>
+																																													</td>
+																																												</tr>
+																																											</td>
+																																										</td>
+																																									</tr>
+																																								</td>
+																																							</td>
+																																						</tr>
+																																					</td>
+																																				</td>
+																																			</tr>
+																																		</td>
+																																	</td>
+																																</tr>
+																															</td>
+																														</td>
+																													</tr>
+																												</td>
+																											</td>
+																										</tr>
+																									</td>
+																								</td>
+																							</tr>
+																						</td>
+																					</td>
+																				</tr>
+																			</td>
+																		</td>
+																	</tr>
+																</td>
+															</td>
+														</tr>
+													</tbody>
+												</th>
+											</th>
+										</tr>
+									</thead>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<footer class="content-section">
+			<div class="container">
+				<div class="row text-center">
+					<div class="col-sm-12 mb25">
+						<p><a href="http://csivit.com" target="_blank" style="text-decoration:none;">Computer Society of India - VIT University</a></p> <small class="show">&copy;&nbsp;Aman Sardana.&nbsp;<span class="year"></span>. All rights reserved.</small></div>
+				</div>
+			</div>
+		</footer>
+		<script src="scripts/docs.js"></script>
+
+	</body>
+</head>
+
+</html>

@@ -10,6 +10,7 @@ var passport = require("./core/passportinit");
 var flash = require("connect-flash")
 var multer = require("multer")
 
+app.set('port', (process.env.PORT || 5000));
 
 mongoose.connect(dbconf.url);
 app.set('view engine', 'ejs');
@@ -66,6 +67,6 @@ app.post('/avatar/upload',function(req,res){
 
 app.use('/',require('./routes/main')(passport))
 
-app.listen(sconf.port,sconf.ip,function(){
-    console.log('Server is running on ',sconf.ip,':',sconf.port);
-})
+app.listen(app.get('port'), function() {
+  console.log('Node app is running on port', app.get('port'));
+});

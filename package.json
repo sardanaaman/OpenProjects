@@ -4,7 +4,8 @@
   "description": "A project management tool based on user preferences",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "author": "Subash Sn",
   "license": "BSD-2-Clause",

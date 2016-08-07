@@ -1,5 +1,5 @@
 var mongoose =  require("mongoose");
-var bcrypt = require("bcrypt")
+var bcrypt = require("bcryptjs")
 
 var UserSchema = new mongoose.Schema({
     name:{
@@ -40,7 +40,7 @@ var UserSchema = new mongoose.Schema({
 })
 
 UserSchema.methods.comparePassword = function(inputpw){
-    return bcrypt.compareSync(inputpw, this.password)     
+    return bcrypt.compareSync(inputpw, this.password)
 }
 
 UserSchema.methods.setPassword = function(inputpw,callback){

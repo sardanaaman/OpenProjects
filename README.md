@@ -16,10 +16,6 @@ Password: guest
 
   [99385257]: https://openprojects.herokuapp.com/documentation/index.html "OpenProjects Frontend Documentation"
 
-**Frontend Case Study** available [here][0997bc29].
-
-  [0997bc29]: https://www.amansardana.xyz/work.html/casestudies "OpenProjects (Beta) Frontend Case Study"
-
 ---
 
 ### The Problem
